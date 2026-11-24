@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-06.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-07.webp">
 <meta property="article:published_time" content="2022-05-12T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.569Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:43.903Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="fcitx">
 <meta property="article:tag" content="fcitx5">
@@ -279,7 +279,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>764</span>
+      <span>713</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -296,8 +296,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-01.webp" lt="Screenshot_輸入法 _2"/>
-
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-01.webp"></p>
 <p>本次分享的是 Arch Linux 的衍生發行版：Garuda Linux 的安裝方式，ubuntu 的部分，我另外寫一篇安裝過程紀錄：<a href="/linux/fcitx5-with-chewing-on-ubuntu-22-04-lts/">在 Ubuntu 22.04 LTS 上用 Fcitx5 搭配新酷音</a>。</p>
 <p>在 Garuda Linux 上，透過 Setup Assistant 安裝與使用 Fcitx5 搭配嘸蝦米是非常方便的事，也是我個人目前接觸到的 Arch Linux 衍生發行版當中，最便利的。</p>
 <p>但是，不是每個人都用嘸蝦米，對於不少微軟新注音的使用者而言，也會想要在 Linux 上面使用相對比較熟悉的輸入法。</p>
@@ -315,21 +314,21 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-chewing</span><br><span class="line">Enter a selection: [Enter]</span><br><span class="line">:: Proceed with installation? [Y/n] [Enter]</span><br><span class="line">sudo vim /etc/environment</span><br><span class="line">i</span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
 <ol start="5">
-<li>我把執行上述指令的過程，截圖放到下面的 Flickr 相簿，給有需要的伙伴參考。<br><img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-02.webp" alt="installingFcitx5andfctix5-chewingonArcoLinuxL"></li>
+<li>我把執行上述指令的過程，截圖放到下面的 Flickr 相簿，給有需要的伙伴參考。<br><img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-02.webp"></li>
 </ol>
 <h3 id="已經有-Fcitx5，另外安裝「新酷音輸入法」"><a href="#已經有-Fcitx5，另外安裝「新酷音輸入法」" class="headerlink" title="已經有 Fcitx5，另外安裝「新酷音輸入法」"></a>已經有 Fcitx5，另外安裝「新酷音輸入法」</h3><p>已經有 Fcitx5 的伙伴，只要再安裝「新酷音輸入法」的話，就是把表格檔與相依套件載回來，再進入設定的畫面把「新酷音輸入法」加進來，就搞定。</p>
 <p>以下紀錄，是我自己走過的程序。</p>
 <p>首先，在 Terminal 下一道指令(如下)。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5-chewing</span><br></pre></td></tr></table></figure>
-<p><img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-03.webp" alt="Screenshot_~ : fish_4"><br>接著，重新啟動 Fcitx5。要完成這個步驟，有 2 個方式可以達成。</p>
+<p><img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-03.webp"><br>接著，重新啟動 Fcitx5。要完成這個步驟，有 2 個方式可以達成。</p>
 <ol>
 <li><p>可以用指令(如下)。  </p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fcitx5 -rd</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>也可以用圖形介面的方式進行(下圖)。 <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-04.webp" alt="Screenshot_garuda-dr460nized-linux-zen-220329_1"></p>
+<li><p>也可以用圖形介面的方式進行(下圖)。 <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-04.webp"></p>
 </li>
 </ol>
-<h3 id="加入「新酷音輸入法」"><a href="#加入「新酷音輸入法」" class="headerlink" title="加入「新酷音輸入法」"></a>加入「新酷音輸入法」</h3><p>進到 Fcitx5 的設定，就會看到「新酷音輸入法」已經出現在「繁體中文(台灣)」的列表當中，新增之後套用，基本上就可以搞定。 <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-05.webp" alt="Screenshot_輸入法 *_1"> <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-06.webp" alt="Screenshot_輸入法 _1"> <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-07.webp" alt="Screenshot_輸入法 _2"></p>
+<h3 id="加入「新酷音輸入法」"><a href="#加入「新酷音輸入法」" class="headerlink" title="加入「新酷音輸入法」"></a>加入「新酷音輸入法」</h3><p>進到 Fcitx5 的設定，就會看到「新酷音輸入法」已經出現在「繁體中文(台灣)」的列表當中，新增之後套用，基本上就可以搞定。 <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-05.webp"> <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-06.webp"> <img src="/pics/linux/2022-05-12-fcitx5-with-chewing-on-arch-linux/fcitx5-with-chewing-on-arch-linux-07.webp"></p>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>至於使用上的心得，…我問了一下借用我電腦的人(純 Windows User)，他認為在智慧選字的部分，還是比不上微軟新注音，算是勉強可以用的。我自己簡單測試幾個字詞，也發現雖然一開始不一定能夠智慧選字，但學過 1 次就容易順起來。</p>
 <h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><ol>
 <li><p><a target="_blank" rel="noopener" href="http://chewing.im/">新酷音輸入法</a></p>
@@ -395,14 +394,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

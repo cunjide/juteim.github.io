@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://jute.im/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-07.webp">
 <meta property="og:image" content="https://jute.im/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-08.webp">
 <meta property="article:published_time" content="2023-11-15T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.658Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:43.973Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="boshiamy">
 <meta property="article:tag" content="fcitx5">
@@ -280,7 +280,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>824</span>
+      <span>656</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -297,7 +297,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>FreeBSD 14.0 的正式版似乎還沒有經過官方正式公佈，我是直接去 <a target="_blank" rel="noopener" href="https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.0/">Index of &#x2F;releases&#x2F;amd64&#x2F;amd64&#x2F;ISO-IMAGES&#x2F;14.0&#x2F;</a> 找到檔案命名為 FreeBSD-14.0-RELEASE-amd64-dvd1.iso 的 ISO 檔載回來使用的。<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-01.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp2"/></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>FreeBSD 14.0 的正式版似乎還沒有經過官方正式公佈，我是直接去 <a target="_blank" rel="noopener" href="https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.0/">Index of &#x2F;releases&#x2F;amd64&#x2F;amd64&#x2F;ISO-IMAGES&#x2F;14.0&#x2F;</a> 找到檔案命名為 FreeBSD-14.0-RELEASE-amd64-dvd1.iso 的 ISO 檔載回來使用的。<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-01.webp"></p>
 <h3 id="安裝系統的心得與流程"><a href="#安裝系統的心得與流程" class="headerlink" title="安裝系統的心得與流程"></a>安裝系統的心得與流程</h3><ol>
 <li><p>本次安裝是在 VirtualBox 上進行，而且，我基本上就是參考之前自己寫下的紀錄，…結果也因此發現自己有一些筆誤，與不夠周全的部分。</p>
 </li>
@@ -330,9 +330,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install zh-CJKUnifonts zh-kcfonts zh-taipeisanstc-b</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>安裝中文輸入法框架。</li>
+<li>安裝中文輸入法框架。<br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-02.webp"></li>
 </ol>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-02.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp1"/>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install fcitx5 fcitx5-configtool zh-fcitx5-chinese-addons zh-fcitx5-table-extra zh-fcitx5-table-other zh-fcitx5-chewing</span><br><span class="line">mkdir ~/.config/autostart</span><br><span class="line">cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
@@ -352,24 +351,13 @@
 <ol start="5">
 <li><p>重新啟動系統，讓中文語系與中文輸入法框架(即 Fcitx5)生效。</p>
 </li>
-<li><p>新酷音輸入法在預設的輸入法裡面。</p>
+<li><p>新酷音輸入法在預設的輸入法裡面。<br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-03.webp"></p>
+</li>
+<li><p>嘸蝦米輸入法則是要另外手動添加。<br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-04.webp"></p>
+</li>
+<li><p>先試試嘸蝦米輸入法，再來一波新酷音輸入法。<br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-05.webp"><br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-06.webp"><br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-07.webp"><br><img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-08.webp"></p>
 </li>
 </ol>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-03.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp3"/>
-
-<ol start="7">
-<li>嘸蝦米輸入法則是要另外手動添加。</li>
-</ol>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-04.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp4"/>
-
-<ol start="8">
-<li>先試試嘸蝦米輸入法，再來一波新酷音輸入法。</li>
-</ol>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-05.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp5"/>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-06.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp6"/>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-07.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp7"/>
-<img src="/pics/bsd/2023-11-15-freebsd-14-0-and-l10n/freebsd-14-0-and-l10n-08.webp" alt="FreeBSD14.0RELEASEonVirtualBoxEp8"/>
-
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li><p>本次安裝使用的 ISO 檔版本是 FreeBSD-14.0-RELEASE-amd64-dvd1.iso。</p>
 </li>
@@ -446,14 +434,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

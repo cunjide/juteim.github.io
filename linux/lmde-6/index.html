@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2023-10-12-lmde-6/lmde-6-11.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2023-10-12-lmde-6/lmde-6-12.webp">
 <meta property="article:published_time" content="2023-10-12T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:33.149Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:44.341Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="boshiamy">
 <meta property="article:tag" content="fcitx5">
@@ -286,7 +286,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>991</span>
+      <span>791</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -303,32 +303,31 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Linux Mint 目前在 DistroWatch 上的「網頁參觀排名」是第 2 名，這支衍生發行版有一定的受歡迎程度。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-01.webp" alt="installLmde6onVirtualBoxEp (1)"/></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Linux Mint 目前在 DistroWatch 上的「網頁參觀排名」是第 2 名，這支衍生發行版有一定的受歡迎程度。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-01.webp"></p>
 <p>Linux Mint 除了基於 Ubuntu 的版本之外，也有基於 Debian 的版本，而這篇貼文主要是我使用基於 Debian 的 LMDE(Linux Mint Debian Edition) 6 時，安裝嘸蝦米輸入法所做的紀錄。</p>
 <p>初次安裝完，記得先幫系統做一次更新，用 GUI 的介面更新，或是在 CLI 下 <code>sudo apt upgrade</code> 都行。</p>
 <h3 id="安裝系統的心得與建議"><a href="#安裝系統的心得與建議" class="headerlink" title="安裝系統的心得與建議"></a>安裝系統的心得與建議</h3><ol>
-<li><p>我是在 VirtualBox 上進行安裝，系統預設能夠抓到的螢幕解析度是 1024x768，我非常建議先調整成 1280x800，不然整個安裝介面的顯示會不夠完整。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-02.webp" width="800" height="600" alt="installLmde6onVirtualBoxEp (3)"/> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-03.webp" alt="installLmde6onVirtualBoxEp (4)"/> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-04.webp" alt="installLmde6onVirtualBoxEp (5)"/></p>
+<li><p>我是在 VirtualBox 上進行安裝，系統預設能夠抓到的螢幕解析度是 1024x768，我非常建議先調整成 1280x800，不然整個安裝介面的顯示會不夠完整。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-02.webp"> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-03.webp"> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-04.webp"></p>
 </li>
-<li><p>儘管與 Linux Mint 一樣，都使用 CINNAMON，但是，從安裝過程，還是可以看到骨子裡有一點點不同(是在玩大家來找碴？)。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-05.webp" alt="installLmde6onVirtualBoxEp (6)"/> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-06.webp" width="800" height="600" alt="installLmde6onVirtualBoxEp (2)"/></p>
+<li><p>儘管與 Linux Mint 一樣，都使用 CINNAMON，但是，從安裝過程，還是可以看到骨子裡有一點點不同(是在玩大家來找碴？)。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-05.webp"> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-06.webp"></p>
 </li>
 </ol>
-<h3 id="安裝嘸蝦米輸入法"><a href="#安裝嘸蝦米輸入法" class="headerlink" title="安裝嘸蝦米輸入法"></a>安裝嘸蝦米輸入法</h3><img src="/pics/linux/2023-10-12-lmde-6/lmde-6-07.webp" alt="lmde6AndBoshiamyEp (9)"/>
-
+<h3 id="安裝嘸蝦米輸入法"><a href="#安裝嘸蝦米輸入法" class="headerlink" title="安裝嘸蝦米輸入法"></a>安裝嘸蝦米輸入法</h3><p><img src="/pics/linux/2023-10-12-lmde-6/lmde-6-07.webp"></p>
 <ol>
 <li><p>關鍵是<code>fcitx5-table-extra</code>這支套件，但身為 Debian 衍生發行版的 LMDE，也一樣沒有將<code>fcitx5-table-extra</code>納入軟體庫。</p>
 </li>
 <li><p>我的方法是先下一道指令，一口氣把能夠上的 Fcitx5 相關套件都補足。</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx5*</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>下圖是把 Fcitx5 相關套件都補足之前，我在 CLI 下一道指令：<code>im-config</code>，以及透過開始功能表的「搜尋」功能所做的觀察。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-08.webp" alt="lmde6AndBoshiamyEp (1)"/> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-09.webp" alt="lmde6AndBoshiamyEp (5)"/></p>
+<li><p>下圖是把 Fcitx5 相關套件都補足之前，我在 CLI 下一道指令：<code>im-config</code>，以及透過開始功能表的「搜尋」功能所做的觀察。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-08.webp"> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-09.webp"></p>
 </li>
-<li><p>下圖則是把 Fcitx5 相關套件補足之後，一樣下<code>im-config</code>這道指令與透過開始功能表的「搜尋」功能後，再做的觀察。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-10.webp" alt="lmde6AndBoshiamyEp (6)"/> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-11.webp" alt="lmde6AndBoshiamyEp (7)"/></p>
+<li><p>下圖則是把 Fcitx5 相關套件補足之後，一樣下<code>im-config</code>這道指令與透過開始功能表的「搜尋」功能後，再做的觀察。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-10.webp"> <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-11.webp"></p>
 </li>
 <li><p>跑一趟 pkgs.org (<a target="_blank" rel="noopener" href="https://pkgs.org/download/fcitx5-table-extra">Fcitx5-table-extra Download (RPM, TGZ, TXZ, XBPS, XZ, ZST)</a>) 把 <code>fcitx5-table-extra</code> 載回來。</p>
 </li>
 <li><p>載回來的是一個壓縮檔：<code>fcitx5-table-extra-5.0.13-1-any.pkg.tar.xz</code>，我建議不要急著解壓縮以及把檔案放到它們該去的位置：<code>/usr/share</code> 裡，因為， 「重新啟動」Fcitx5 後，會發現嘸蝦米的「嘸」圖像，並沒有正常顯示，而新酷音的圖像卻是大大地展露無遺。基本上，這個的狀況，不太會影響到嘸蝦米輸入法的使用(至少我使用過程沒遇到過)。但，我多少有點在意，因此走一個簡單的做法，就是只把 <strong>fcitx5-table-extra-5.0.13-1-any.pkg.tar.xz</strong>裡 <code>/usr/share/icons/hicolor/16x16/apps</code> 這個路徑底下的嘸蝦米圖像相關檔案(詳可見下圖)原封不動地搬入系統內的 <code>/usr/share/icons/hicolor/16x16/apps</code> 裡，其他 <code>icons/hicolor</code> 路徑內的圖像檔，如：<code>/22x22</code>、<code>/24x24</code>、<code>/48x48</code> 以及 <code>64x64</code> 底下的圖像檔，就不要移師進入系統 (按兵不動的概念)。</p>
 </li>
-<li><p>接著，「重新啟動」Fcitx5，應該會顯示 16x16 的嘸蝦米圖像(詳可見下圖)，雖然，在 48x48 的新酷音圖像面前，嘸蝦米顯得有點小咖就是，但，總比沒有好。當然，如果要讓嘸蝦米與新酷音平起平坐，也不是不行，但…，對我來說，有顯示就有加分，我已經懶得再花時間去處理這美中不足之處。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-12.webp" alt="lmde6AndBoshiamyEp (10)"/></p>
+<li><p>接著，「重新啟動」Fcitx5，應該會顯示 16x16 的嘸蝦米圖像(詳可見下圖)，雖然，在 48x48 的新酷音圖像面前，嘸蝦米顯得有點小咖就是，但，總比沒有好。當然，如果要讓嘸蝦米與新酷音平起平坐，也不是不行，但…，對我來說，有顯示就有加分，我已經懶得再花時間去處理這美中不足之處。 <img src="/pics/linux/2023-10-12-lmde-6/lmde-6-12.webp"></p>
 </li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
@@ -348,9 +347,9 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
               <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
               <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
               <a href="/tags/lmde/" rel="tag"># lmde</a>
@@ -399,14 +398,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

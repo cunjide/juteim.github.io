@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://jute.im/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-11.webp">
 <meta property="og:image" content="https://jute.im/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-12.webp">
 <meta property="article:published_time" content="2023-10-21T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.653Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:43.968Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="boshiamy">
 <meta property="article:tag" content="fcitx5">
@@ -284,14 +284,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>1.1k</span>
+      <span>874</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>3 分鐘</span>
+      <span>2 分鐘</span>
     </span>
 </div>
 
@@ -301,7 +301,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這幾天，心血來潮找小惡魔玩。<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-01.webp" alt="FreeBSD13.2onVirtualBoxEp2"/></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這幾天，心血來潮找小惡魔玩。<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-01.webp"></p>
 <h3 id="安裝系統的心得與建議"><a href="#安裝系統的心得與建議" class="headerlink" title="安裝系統的心得與建議"></a>安裝系統的心得與建議</h3><ol>
 <li><p>本次安裝是在 VirtualBox 上進行。</p>
 </li>
@@ -309,7 +309,7 @@
 </li>
 <li><p>安裝的過程一樣都是英文，我也沒有特別去看看是不是也支援其他語系介面。</p>
 </li>
-<li><p>安裝畫面來到「Distribution Select」這個介面時，記得選擇將「ports」與「src」安裝進來。<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-02.webp" alt="FreeBSD13.2onVirtualBoxEp1"/></p>
+<li><p>安裝畫面來到「Distribution Select」這個介面時，記得選擇將「ports」與「src」安裝進來。<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-02.webp"></p>
 </li>
 <li><p>由於我是打算拿來當桌面系統使用，所以硬碟規劃的部分，就讓系統的預設去跑。</p>
 </li>
@@ -332,8 +332,7 @@
 <li><p>登入使用者後，下 <code>startx</code> 進入 X Window。</p>
 </li>
 </ol>
-<h3 id="設定音效卡"><a href="#設定音效卡" class="headerlink" title="設定音效卡"></a>設定音效卡</h3><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-03.webp" alt="FreeBSD13.2onVirtualBoxEp3"/>
-
+<h3 id="設定音效卡"><a href="#設定音效卡" class="headerlink" title="設定音效卡"></a>設定音效卡</h3><p><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-03.webp"></p>
 <ol>
 <li><p>FreeBSD 似乎沒有在 VirtualBox 上，將音效卡模組(Sound card module)載入。</p>
 </li>
@@ -376,23 +375,11 @@
 <ol start="5">
 <li><p>重新啟動系統，讓中文語系與中文輸入法框架(即 Fcitx5)生效。</p>
 </li>
-<li><p>新酷音輸入法在預設的輸入法裡面。</p>
+<li><p>新酷音輸入法在預設的輸入法裡面。<br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-04.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-05.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-06.webp"></p>
+</li>
+<li><p>嘸蝦米輸入法則是要另外手動添加。<br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-07.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-08.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-09.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-10.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-11.webp"><br><img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-12.webp"></p>
 </li>
 </ol>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-04.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (1)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-05.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (2)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-06.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (3)"/>
-
-<ol start="7">
-<li>嘸蝦米輸入法則是要另外手動添加。</li>
-</ol>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-07.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (4)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-08.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (5)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-09.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (6)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-10.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (7)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-11.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (8)"/>
-<img src="/pics/bsd/2023-10-21-freebsd-13-2-and-l10n/freebsd-13-2-and-l10n-12.webp" alt="chineseInputMethodsAndFreeBSD13.2Ep (9)"/>
-
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li><p>本次安裝使用的 ISO 檔版本是 FreeBSD-13.2-RELEASE-amd64-dvd1.iso。</p>
 </li>
@@ -469,14 +456,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

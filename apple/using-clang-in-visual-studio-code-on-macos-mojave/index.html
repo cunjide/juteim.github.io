@@ -52,7 +52,7 @@
 <meta property="og:image" content="https://jute.im/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-23.webp">
 <meta property="og:image" content="https://jute.im/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-24.webp">
 <meta property="article:published_time" content="2022-01-22T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:33.553Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:44.639Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="apple">
 <meta property="article:tag" content="macos">
@@ -296,7 +296,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>904</span>
+      <span>851</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -313,8 +313,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-01.webp" alt="installingVSCodeandClangonmacOSmojave25"/>
-
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-01.webp"></p>
 <p>Visual Studio Code (又稱 VSCode)，在三大平台都能夠使用，今天這一則貼文是紀錄在 macOS mojave 上安裝 VSCode，設定一個可以進行 C++ 程式設計 IDE 的過程。</p>
 <h4 id="我把貼文分成-5-個部分。"><a href="#我把貼文分成-5-個部分。" class="headerlink" title="我把貼文分成 5 個部分。"></a>我把貼文分成 5 個部分。</h4><ol>
 <li><p>安裝 Clang</p>
@@ -329,21 +328,21 @@
 </li>
 </ol>
 <h3 id="安裝-Clang"><a href="#安裝-Clang" class="headerlink" title="安裝 Clang"></a>安裝 Clang</h3><ol>
-<li><p>系統上若還沒有 Clang 的話，可以直接開啟 Terminal，執行 gcc 這個指令，macOS 就會跳出一個對話框，然後跟著對話框走，應該就可以安裝完 Clang(不曉得算不算是一個偷懶的做法)。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-02.webp" alt="installingVSCodeandClangonmacOSmojave02"></p>
-<p>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-03.webp" alt="installingVSCodeandClangonmacOSmojave03"></p>
-<p>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-04.webp" alt="installingVSCodeandClangonmacOSmojave04"></p>
-<p>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-05.webp" alt="installingVSCodeandClangonmacOSmojave05"></p>
+<li><p>系統上若還沒有 Clang 的話，可以直接開啟 Terminal，執行 gcc 這個指令，macOS 就會跳出一個對話框，然後跟著對話框走，應該就可以安裝完 Clang(不曉得算不算是一個偷懶的做法)。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-02.webp"></p>
+<p>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-03.webp"></p>
+<p>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-04.webp"></p>
+<p>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-05.webp"></p>
 </li>
-<li><p>再下一道指令：<code>clang --version</code>，確認一下 Clang 是不是確實有安裝進來。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-06.webp" alt="installingVSCodeandClangonmacOSmojave06"></p>
+<li><p>再下一道指令：<code>clang --version</code>，確認一下 Clang 是不是確實有安裝進來。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-06.webp"></p>
 </li>
 </ol>
 <h3 id="安裝-VSCode-主程式"><a href="#安裝-VSCode-主程式" class="headerlink" title="安裝 VSCode 主程式"></a>安裝 VSCode 主程式</h3><ol>
-<li><p>跑一趟官網，下載 VSCode 主程式，我建議下載 Universal 版(M1 與 Intel 處理器皆可服用的版本)。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-07.webp" alt="installingVSCodeandClangonmacOSmojave01"></p>
+<li><p>跑一趟官網，下載 VSCode 主程式，我建議下載 Universal 版(M1 與 Intel 處理器皆可服用的版本)。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-07.webp"></p>
 </li>
-<li><p>從官網載回來的是 Zip 檔，直接解壓，並放到「應用程式」的資料夾裡。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-08.webp" alt="installingVSCodeandClangonmacOSmojave07"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-09.webp" alt="installingVSCodeandClangonmacOSmojave08"></p>
+<li><p>從官網載回來的是 Zip 檔，直接解壓，並放到「應用程式」的資料夾裡。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-08.webp"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-09.webp"></p>
 </li>
-<li><p>設定 VSCode 主程式，可以在 Terminal 透過 Command Line 啟動：<br>  (1)先開啟 VSCode 主程式，這時系統會丟出一個與安全性有關的問題，請點「打開」。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-10.webp" alt="installingVSCodeandClangonmacOSmojave09"></p>
-<p>  (2)進入主程式後，在鍵盤上按下組合鍵：Cmd(⌘)+Shift+P，後跳出 Command Palette，官網建議餵 Command Palette 關鍵字：「shell command」，實際上我只打「shell」就讓「Shell Command: Install ‘code’ command in PATH」跳出來，看到後，不用客氣地給它點下去。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-11.webp" alt="installingVSCodeandClangonmacOSmojave10"><br>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-12.webp" alt="installingVSCodeandClangonmacOSmojave11"><br>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-13.webp" alt="installingVSCodeandClangonmacOSmojave12"><br>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-14.webp" alt="installingVSCodeandClangonmacOSmojave13"></p>
+<li><p>設定 VSCode 主程式，可以在 Terminal 透過 Command Line 啟動：<br>  (1)先開啟 VSCode 主程式，這時系統會丟出一個與安全性有關的問題，請點「打開」。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-10.webp"></p>
+<p>  (2)進入主程式後，在鍵盤上按下組合鍵：Cmd(⌘)+Shift+P，後跳出 Command Palette，官網建議餵 Command Palette 關鍵字：「shell command」，實際上我只打「shell」就讓「Shell Command: Install ‘code’ command in PATH」跳出來，看到後，不用客氣地給它點下去。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-11.webp"><br>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-12.webp"><br>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-13.webp"><br>  <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-14.webp"></p>
 </li>
 </ol>
 <h3 id="設定程式設計專案路徑"><a href="#設定程式設計專案路徑" class="headerlink" title="設定程式設計專案路徑"></a>設定程式設計專案路徑</h3><ol>
@@ -351,17 +350,17 @@
 </li>
 <li><p>我要設定 C++ 的程式設計專案路徑，我下的指令如下：</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p cpp/helloWorld</span><br><span class="line">cd cpp/helloWorld</span><br><span class="line">code .</span><br></pre></td></tr></table></figure>
-<p> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-15.webp" alt="installingVSCodeandClangonmacOSmojave14"></p>
+<p> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-15.webp"></p>
 </li>
 </ol>
 <h3 id="安裝-Visual-Studio-Code-語言套件與-C-相關套件"><a href="#安裝-Visual-Studio-Code-語言套件與-C-相關套件" class="headerlink" title="安裝 Visual Studio Code 語言套件與 C++ 相關套件"></a>安裝 Visual Studio Code 語言套件與 C++ 相關套件</h3><ol>
-<li><p>下完 <code>code .</code> 這個指令後，就會跳出 VSCode 主程式，勾選「Trust the …」，點下「Yes, I trust…」那個按鈕。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-16.webp" alt="installingVSCodeandClangonmacOSmojave15"></p>
+<li><p>下完 <code>code .</code> 這個指令後，就會跳出 VSCode 主程式，勾選「Trust the …」，點下「Yes, I trust…」那個按鈕。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-16.webp"></p>
 </li>
-<li><p>一進入程式，程式的右下角就會出現「安裝語言套件…」，而且會對應到使用者的系統語言設定，可以不安裝，但如果對中文比較熟悉的人，倒是可以安裝並重新啟動 VSCode。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-17.webp" alt="installingVSCodeandClangonmacOSmojave16-1"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-18.webp" alt="installingVSCodeandClangonmacOSmojave16"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-19.webp" alt="installingVSCodeandClangonmacOSmojave17"></p>
+<li><p>一進入程式，程式的右下角就會出現「安裝語言套件…」，而且會對應到使用者的系統語言設定，可以不安裝，但如果對中文比較熟悉的人，倒是可以安裝並重新啟動 VSCode。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-17.webp"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-18.webp"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-19.webp"></p>
 </li>
-<li><p>找從程式介面左側，從上數下來的第 5 個圖示，在搜尋框打「C++」，把 C&#x2F;C++ for Visual Studio Code 的套件找出來安裝。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-20.webp" alt="installingVSCodeandClangonmacOSmojave18"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-21.webp" alt="installingVSCodeandClangonmacOSmojave19"></p>
+<li><p>找從程式介面左側，從上數下來的第 5 個圖示，在搜尋框打「C++」，把 C&#x2F;C++ for Visual Studio Code 的套件找出來安裝。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-20.webp"> <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-21.webp"></p>
 </li>
-<li><p>按下組合鍵：Cmd(⌘)+Shift+P，啟動「C&#x2F;C++: Edit Configurations (UI)」，去完成 C&#x2F;C++ Configurations，我選用「c++14」。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-22.webp" alt="installingVSCodeandClangonmacOSmojave21"></p>
+<li><p>按下組合鍵：Cmd(⌘)+Shift+P，啟動「C&#x2F;C++: Edit Configurations (UI)」，去完成 C&#x2F;C++ Configurations，我選用「c++14」。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-22.webp"></p>
 </li>
 </ol>
 <h3 id="測試-VSCode"><a href="#測試-VSCode" class="headerlink" title="測試 VSCode"></a>測試 VSCode</h3><ol>
@@ -369,9 +368,9 @@
 </li>
 <li><p>寫一段程式碼測試看看，或是拿官方給的程式碼，複製貼上，再按「Cmd(⌘)+S」，接著再按「F5」，程式會請我們選取環境，我選「C++ (GDB&#x2F;LLDB)」。</p>
 </li>
-<li><p>再選「clang++ -建置…」。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-23.webp" alt="installingVSCodeandClangonmacOSmojave24"></p>
+<li><p>再選「clang++ -建置…」。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-23.webp"></p>
 </li>
-<li><p>執行完，可在下方分割視窗裡，看到 4 個項目，請點一下最右邊「端終機」旁的「+」號(mojave 預設是 bash)，找到方才「啟動偵錯」後的檔案，通常會有 3 個，可以去執行沒有副檔名的那一個檔案，看看輸出結果。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-24.webp" alt="installingVSCodeandClangonmacOSmojave25"></p>
+<li><p>執行完，可在下方分割視窗裡，看到 4 個項目，請點一下最右邊「端終機」旁的「+」號(mojave 預設是 bash)，找到方才「啟動偵錯」後的檔案，通常會有 3 個，可以去執行沒有副檔名的那一個檔案，看看輸出結果。(下圖) <img src="/pics/apple/2022-01-22-using-clang-in-visual-studio-code-on-macos-mojave/using-clang-in-visual-studio-code-on-macos-mojave-24.webp"></p>
 </li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>Have fun. Enjoy coding.</p>
@@ -433,14 +432,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

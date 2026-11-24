@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-04.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-05.webp">
 <meta property="article:published_time" content="2022-01-31T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.748Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:44.048Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="contest">
 <meta property="article:tag" content="linux">
@@ -277,7 +277,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>673</span>
+      <span>638</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -294,8 +294,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-01.webp" alt="installingUbuntu18.04.6LiveServerinVirtualBoxEp20"/>
-
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-01.webp"></p>
 <p>本次紀錄所使用的是在 VirtualBox 上安裝的 Ubuntu 18.04.6 LTS Live Server，本篇紀錄大致分為 3 個部分。</p>
 <ol>
 <li><p>在 VirtualBox 上安裝 Ubuntu 18.04.6 LTS Live Server。</p>
@@ -305,8 +304,8 @@
 <li><p>執行並測試 Contest Management System。</p>
 </li>
 </ol>
-<h3 id="在-VirtualBox-上安裝-Ubuntu-18-04-6-LTS-Live-Server"><a href="#在-VirtualBox-上安裝-Ubuntu-18-04-6-LTS-Live-Server" class="headerlink" title="在 VirtualBox 上安裝 Ubuntu 18.04.6 LTS Live Server"></a>在 VirtualBox 上安裝 Ubuntu 18.04.6 LTS Live Server</h3><p>以下是在 VirtualBox 的安裝過程截圖(點圖至 Flickr 瀏覽相簿) <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-02.webp" alt="Ubuntu18.04.6LiveServer"></p>
-<h3 id="在-Ubuntu-18-04-6-LTS-Live-Server-上安裝-Contest-Management-System"><a href="#在-Ubuntu-18-04-6-LTS-Live-Server-上安裝-Contest-Management-System" class="headerlink" title="在 Ubuntu 18.04.6 LTS Live Server 上安裝 Contest Management System"></a>在 Ubuntu 18.04.6 LTS Live Server 上安裝 Contest Management System</h3><p>以下是在 Ubuntu 18.04.6 LTS Live Server 的安裝過程截圖(點圖至 Flickr 瀏覽相簿) <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-03.webp" alt="contestManagementSystemonUbuntu18.04.6LiveServer"></p>
+<h3 id="在-VirtualBox-上安裝-Ubuntu-18-04-6-LTS-Live-Server"><a href="#在-VirtualBox-上安裝-Ubuntu-18-04-6-LTS-Live-Server" class="headerlink" title="在 VirtualBox 上安裝 Ubuntu 18.04.6 LTS Live Server"></a>在 VirtualBox 上安裝 Ubuntu 18.04.6 LTS Live Server</h3><p>以下是在 VirtualBox 的安裝過程截圖(點圖至 Flickr 瀏覽相簿) <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-02.webp"></p>
+<h3 id="在-Ubuntu-18-04-6-LTS-Live-Server-上安裝-Contest-Management-System"><a href="#在-Ubuntu-18-04-6-LTS-Live-Server-上安裝-Contest-Management-System" class="headerlink" title="在 Ubuntu 18.04.6 LTS Live Server 上安裝 Contest Management System"></a>在 Ubuntu 18.04.6 LTS Live Server 上安裝 Contest Management System</h3><p>以下是在 Ubuntu 18.04.6 LTS Live Server 的安裝過程截圖(點圖至 Flickr 瀏覽相簿) <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-03.webp"></p>
 <h4 id="指令大致如下"><a href="#指令大致如下" class="headerlink" title="指令大致如下"></a>指令大致如下</h4><p>sudo apt update</p>
 <p>sudo apt install build-essential openjdk-8-jdk-headless fp-compiler postgresql postgresql-client python3.6 cppreference-doc-en-html cgroup-lite libcap-dev zip python3.6-dev libpq-dev libcups2-dev libyaml-dev libffi-dev python3-pip python3-setuptools python3-tornado python3-psycopg2 python3-sqlalchemy python3-psutil python3-netifaces python3-crypto python3-six python3-bs4 python3-coverage python3-mock python3-requests python3-werkzeug python3-gevent python3-bcrypt python3-chardet patool python3-babel python3-xdg python3-future python3-jinja2 python3-yaml python3-sphinx python3-cups python3-pypdf2</p>
 <p>&#x2F;&#x2F;python3 的相關套件很多。<br>&#x2F;&#x2F;如果想要方便的話，比較建議可以用 Shell Script 的方式服用。</p>
@@ -328,8 +327,8 @@
 <p>cmsAddAdmin -p [password&#x2F;密碼] [name&#x2F;帳號名稱] &#x2F;&#x2F;直接下指令，設定 CMS Admin 的帳號與密碼：cmsAddAdmin -p [password&#x2F;密碼] [name&#x2F;帳號名稱]</p>
 <p>cmsLogService</p>
 <p>cmsAdminWebServer</p>
-<h3 id="執行並測試-Contest-Management-System"><a href="#執行並測試-Contest-Management-System" class="headerlink" title="執行並測試 Contest Management System"></a>執行並測試 Contest Management System</h3><p>要從目前的主機，登入到 VirtualBox 上的 CMS Server 前，請確認一下網卡的設定。 第一步是先到 「Oracle VM VirtualBox 管理員」→「建立」一張新的網卡。 <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-04.webp" alt="installingContestManagementSystemonUbuntu18.04.6LiveServerEp19"></p>
-<p>再到 VirtualBox 上的 Ubuntu 18.04.6 LTS Live Server 的「設定」→「網路」→「介面卡 1」，改成「僅限主機介面卡」。 <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-05.webp" alt="installingContestManagementSystemonUbuntu18.04.6LiveServerEp20"></p>
+<h3 id="執行並測試-Contest-Management-System"><a href="#執行並測試-Contest-Management-System" class="headerlink" title="執行並測試 Contest Management System"></a>執行並測試 Contest Management System</h3><p>要從目前的主機，登入到 VirtualBox 上的 CMS Server 前，請確認一下網卡的設定。 第一步是先到 「Oracle VM VirtualBox 管理員」→「建立」一張新的網卡。 <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-04.webp"></p>
+<p>再到 VirtualBox 上的 Ubuntu 18.04.6 LTS Live Server 的「設定」→「網路」→「介面卡 1」，改成「僅限主機介面卡」。 <img src="/pics/linux/2022-01-31-installing-and-running-contest-management-system-on-ubuntu-live-server/installing-and-running-contest-management-system-on-ubuntu-live-server-05.webp"></p>
 <p>ifconfig -a &#x2F;&#x2F;看一下 [CMS Server 的 IP] 是什麼。</p>
 <p>從另外一部電腦，去 ping 一下 [CMS Server 的 IP] 看看。</p>
 <p>假設是 192.168.56.102，從另外一部電腦，用 Web Browser 登入設定好的 CMS Server 試試看，本例為 <a target="_blank" rel="noopener" href="http://192.168.56.102:8888/"></a><a target="_blank" rel="noopener" href="http://192.168.56.102:8888/">http://192.168.56.102:8888</a>。</p>
@@ -406,14 +405,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

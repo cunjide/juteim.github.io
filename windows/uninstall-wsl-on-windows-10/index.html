@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://jute.im/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-04.webp">
 <meta property="og:image" content="https://jute.im/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-05.webp">
 <meta property="article:published_time" content="2025-05-18T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:33.499Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:44.592Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="windows">
@@ -276,7 +276,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>479</span>
+      <span>374</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -293,10 +293,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄我參考 Windows 11 移除 WSL 的方法，自己試著在 Windows 10 上將 WSL 移除的紀錄。 <img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-01.webp" alt="uninstallWSLonWindows10Ep2"/></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄我參考 Windows 11 移除 WSL 的方法，自己試著在 Windows 10 上將 WSL 移除的紀錄。 <img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-01.webp"></p>
 <h3 id="移除過程紀錄"><a href="#移除過程紀錄" class="headerlink" title="移除過程紀錄"></a>移除過程紀錄</h3><p>※整個過程，有一大部分是在 Terminal 下指令搞定。</p>
-<img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-02.webp" alt="uninstallWSLonWindows10Ep1"/>
-
+<p><img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-02.webp"></p>
 <ol>
 <li><p>查詢目前安裝的 Linux Distro。<br><code>wsl --list --all</code></p>
 </li>
@@ -306,15 +305,12 @@
 </li>
 <li><p>關閉 Windows 功能：關閉「Windows 子系統 Linux 版」與「虛擬機器平臺(Virtual Machine Platform)」。<br><code>optionalfeatures</code></p>
 </li>
-<li><p>承上，在「關閉 Windows 功能」這個步驟，執行指令後，可能會看到「虛擬機器平台」，也可能會看到的是「Virtual Machine Platform」，無論是那一個，原則上都是一樣的功能。 <img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-03.webp" alt="uninstallWSLonWindows10Ep4"/> <img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-04.webp" alt="uninstallWSLonWindows10Ep5"/></p>
+<li><p>承上，在「關閉 Windows 功能」這個步驟，執行指令後，可能會看到「虛擬機器平台」，也可能會看到的是「Virtual Machine Platform」，無論是那一個，原則上都是一樣的功能。 <img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-03.webp"> <img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-04.webp"></p>
 </li>
-<li><p>進一步手動刪除沒有被移除的檔案：在「檔案總管」輸入以下路徑。<br><code>%USERPROFILE%\AppData\Local\Packages</code></p>
+<li><p>進一步手動刪除沒有被移除的檔案：在「檔案總管」輸入以下路徑。<br><code>%USERPROFILE%\AppData\Local\Packages</code><br><img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-05.webp"></p>
 </li>
-</ol>
-<img src="/pics/windows/2025-05-18-uninstall-wsl-on-windows-10/uninstall-wsl-on-windows-10-05.webp" alt="uninstallWSLonWindows10Ep3"/>
-
-<ol start="7">
-<li>走到這裡，我認為就清理的差不多，如果還想再更徹底一下，可以在 Terminal 下 <code>cleanmgr</code> 這道指令，再去把一些暫存檔清掉。</li>
+<li><p>走到這裡，我認為就清理的差不多，如果還想再更徹底一下，可以在 Terminal 下 <code>cleanmgr</code> 這道指令，再去把一些暫存檔清掉。</p>
+</li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li><p>WSL，全名 Windows Subsystem for Linux，即「適用於 Linux 的 Windows 子系統。</p>
@@ -335,9 +331,9 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/windows/" rel="tag"># windows</a>
               <a href="/tags/windows10/" rel="tag"># windows10</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
           </div>
 
         
@@ -383,14 +379,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

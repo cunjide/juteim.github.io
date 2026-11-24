@@ -45,7 +45,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-15.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-16.webp">
 <meta property="article:published_time" content="2023-05-09T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.690Z">
+<meta property="article:modified_time" content="2026-11-24T11:45:46.512Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="firewalls">
 <meta property="article:tag" content="gufw">
@@ -289,7 +289,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>651</span>
+      <span>617</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -306,43 +306,43 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-01.webp" alt="gufwonManjaroEp (12)"></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-01.webp"></p>
 <p>Linux 上面的防火牆，多數使用者應該會想到「IP 桌子」(iptables)，而 Linux 上大部分的防火牆，也多半就跟 iptables 一樣，要在 Terminal 上做設定，敲敲鍵盤設定，固然是有那麼點帥氣，但，我總覺得以桌面系統而言，經由圖形使用介面(GUI) 來搞定會是另外一個重要的選項。</p>
 <p>這一篇貼文，主要就是我多花一點時間，多認識 gufw 這支 App 的過程。</p>
 <hr>
 <h3 id="安裝程式"><a href="#安裝程式" class="headerlink" title="安裝程式"></a>安裝程式</h3><ol>
-<li><p>說到 gufw，我記得在 MX-Linux 上，gufw 是預設安裝就會放進來的防火牆程式，我試著在最近安裝好的 Manjaro 上找尋一番，並沒有找到。這個問題是好解決，直接先下一道指令把程式安裝進來就可以，這道指令是 <code>pamac install gufw</code>。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-02.webp" alt="gufwonManjaroEp (4)"></p>
+<li><p>說到 gufw，我記得在 MX-Linux 上，gufw 是預設安裝就會放進來的防火牆程式，我試著在最近安裝好的 Manjaro 上找尋一番，並沒有找到。這個問題是好解決，直接先下一道指令把程式安裝進來就可以，這道指令是 <code>pamac install gufw</code>。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-02.webp"></p>
 </li>
-<li><p>gufw 的程式並不會很大，下圖所示是我有幾天沒有更新，下完指令會一併把要這些要更新的程式與所需要的空間，都列算進來。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-03.webp" alt="gufwonManjaroEp (5)"></p>
-<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-04.webp" alt="gufwonManjaroEp (6)"></p>
+<li><p>gufw 的程式並不會很大，下圖所示是我有幾天沒有更新，下完指令會一併把要這些要更新的程式與所需要的空間，都列算進來。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-03.webp"></p>
+<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-04.webp"></p>
 </li>
-<li><p>一併要更新的東西有點多，而且要求重開機，我也就跟著重新開機。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-05.webp" alt="gufwonManjaroEp (7)"></p>
+<li><p>一併要更新的東西有點多，而且要求重開機，我也就跟著重新開機。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-05.webp"></p>
 </li>
-<li><p>進到系統後，找到「防火牆設定」，如果順利的話，點下去程式就會出現。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-06.webp" alt="gufwonManjaroEp (8)"></p>
-<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-07.webp" alt="gufwonManjaroEp (9)"></p>
-<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-08.webp" alt="gufwonManjaroEp (10)"></p>
+<li><p>進到系統後，找到「防火牆設定」，如果順利的話，點下去程式就會出現。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-06.webp"></p>
+<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-07.webp"></p>
+<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-08.webp"></p>
 </li>
 </ol>
 <hr>
 <h3 id="進入程式，初步瞭解一下相關設定"><a href="#進入程式，初步瞭解一下相關設定" class="headerlink" title="進入程式，初步瞭解一下相關設定"></a>進入程式，初步瞭解一下相關設定</h3><ol>
-<li><p>為了多認識一下這支 App，我先透過 Terminal 繞路去看一下路徑 <code>/etc/gufw</code> 裡面的東西，我特意去看一下 profile 檔，並且用 <code>cat</code> 把 profile 檔裡面的東西秀出來，在這裡，我注意到 Home.profile 下的 status 是 disabled。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-09.webp" alt="gufwonManjaroEp (11)"></p>
+<li><p>為了多認識一下這支 App，我先透過 Terminal 繞路去看一下路徑 <code>/etc/gufw</code> 裡面的東西，我特意去看一下 profile 檔，並且用 <code>cat</code> 把 profile 檔裡面的東西秀出來，在這裡，我注意到 Home.profile 下的 status 是 disabled。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-09.webp"></p>
 </li>
-<li><p>我回到圖形介面，把「狀態」做個切換，下圖所示，應該就是已經 On 上去。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-01.webp" alt="gufwonManjaroEp (12)"></p>
+<li><p>我回到圖形介面，把「狀態」做個切換，下圖所示，應該就是已經 On 上去。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-01.webp"></p>
 </li>
-<li><p>既然「狀態」是 On 上，我想 Home.profile 檔的內容肯定會跟著變動，事實證明也是如此(詳見下圖)。也就是說，如果還是想直接用 Terminal 去做設定，原則上也是可以的。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-10.webp" alt="gufwonManjaroEp (13)"></p>
+<li><p>既然「狀態」是 On 上，我想 Home.profile 檔的內容肯定會跟著變動，事實證明也是如此(詳見下圖)。也就是說，如果還是想直接用 Terminal 去做設定，原則上也是可以的。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-10.webp"></p>
 </li>
-<li><p>預設的 profile 檔，總共有 Home、Public 與 Office 三個，如果想要客製化的話，可以透過程式介面，點「+」號按鈕，去做新增「規則」的動作。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-11.webp" alt="gufwonManjaroEp (14)"></p>
-<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-12.webp" alt="gufwonManjaroEp (15)"></p>
-<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-13.webp" alt="gufwonManjaroEp (16)"></p>
+<li><p>預設的 profile 檔，總共有 Home、Public 與 Office 三個，如果想要客製化的話，可以透過程式介面，點「+」號按鈕，去做新增「規則」的動作。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-11.webp"></p>
+<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-12.webp"></p>
+<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-13.webp"></p>
 </li>
-<li><p>此外，程式也提供「報告」與「紀錄」給使用者，算是滿完整的。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-14.webp" alt="gufwonManjaroEp (17)"></p>
-<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-15.webp" alt="gufwonManjaroEp (18)"></p>
+<li><p>此外，程式也提供「報告」與「紀錄」給使用者，算是滿完整的。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-14.webp"></p>
+<p>  <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-15.webp"></p>
 </li>
 </ol>
 <hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li>有興趣的伙伴，可以跑一趟開發者在 GitHub 上的 Project 專頁：<a target="_blank" rel="noopener" href="https://costales.github.io/projects/gufw/">Gufw Firewall • Marcos Costales</a>。</li>
-<li>因為，截至本篇文章，貼出來之前，gufw 的官網還在維護中(很有可能不會再 On 上來)。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-16.webp" alt="gufwonManjaroEp (1)"></li>
+<li>因為，截至本篇文章，貼出來之前，gufw 的官網還在維護中(很有可能不會再 On 上來)。 <img src="/pics/linux/2023-05-09-gufw-firewall-feat-manjaro/gufw-firewall-feat-manjaro-16.webp"></li>
 </ol>
 
     </div>
@@ -402,14 +402,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動

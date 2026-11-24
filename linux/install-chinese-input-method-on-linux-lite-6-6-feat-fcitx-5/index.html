@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-14.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-01.webp">
 <meta property="article:published_time" content="2023-09-22T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.736Z">
+<meta property="article:modified_time" content="2026-11-24T11:46:44.035Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="debian">
 <meta property="article:tag" content="fcitx5">
@@ -289,14 +289,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>952</span>
+      <span>352</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>2 分鐘</span>
+      <span>1 分鐘</span>
     </span>
 </div>
 
@@ -306,17 +306,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本編文章，主要是紀錄 Fcitx5 搭配中文輸入法 (含嘸蝦米輸入法) 的服用過程。<br><img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-01.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (14)"/></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本編文章，主要是紀錄 Fcitx5 搭配中文輸入法 (含嘸蝦米輸入法) 的服用過程。<br><img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-01.webp"></p>
 <hr>
 <h3 id="安裝過程"><a href="#安裝過程" class="headerlink" title="安裝過程"></a>安裝過程</h3><ol>
 <li>先下指定安裝 Fcitx5 (含嘸蝦米輸入法的表格檔)，並且將系統的輸入法框架設定為 Fcitx5。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx5*</span><br><span class="line">wget https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//小提醒：這個下載的連結網址可能隨版本更新及任何原因而改變，</span><br><span class="line">//因此，建議下指令前，先到 pkgs.org 搜尋與確認下載連結的網址。</span><br><span class="line"></span><br><span class="line">tar xvf fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">sudo cp -r usr/share /usr/</span><br><span class="line">im-config -n fcitx5</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<p>   <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-02.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (1)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-03.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (2)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-04.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (3)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-05.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (4)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-06.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (5)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-07.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (6)"/></p>
+<p>   <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-02.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-03.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-04.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-05.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-06.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-07.webp"></p>
 <ol start="2">
-<li><p>重新啟動後，整個桌面環境的下右下角，工作列會出現一個小鍵盤，點右鍵開啟選單後，再點「設定」，進入設定畫面，將嘸蝦米輸入法新增進來。<br><img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-08.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (7)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-09.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (8)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-10.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (9)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-11.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (10)"/></p>
+<li><p>重新啟動後，整個桌面環境的下右下角，工作列會出現一個小鍵盤，點右鍵開啟選單後，再點「設定」，進入設定畫面，將嘸蝦米輸入法新增進來。<br><img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-08.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-09.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-10.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-11.webp"></p>
 </li>
-<li><p>完成設定後，就可以同時享用新酷音輸入法與嘸蝦米輸入法。<br><img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-12.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (11)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-13.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (12)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-14.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (13)"/> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-01.webp" width="800" height="452" alt="installChineseInputMethodonLinuxLite6.6FeatFcitx5Ep (14)"/></p>
+<li><p>完成設定後，就可以同時享用新酷音輸入法與嘸蝦米輸入法。<br><img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-12.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-13.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-14.webp"> <img src="/pics/linux/2023-09-22-install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5-01.webp"></p>
 </li>
 </ol>
 <hr>
@@ -386,14 +386,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">231k</span>
+    <span title="總字數">211k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">9:38</span>
+    <span title="所需總閱讀時間">8:47</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
