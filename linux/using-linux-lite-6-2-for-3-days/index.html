@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Linux Lite 6.2 三天後的感想">
+<meta property="og:url" content="https://jute.im/linux/using-linux-lite-6-2-for-3-days/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="前言">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-01.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-02.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-03.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-04.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-05.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-06.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-07.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-03.webp">
+<meta property="og:image" content="https://www.linuxliteos.com/assets/img/features/gallery/support.png">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-08.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-09.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-10.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-11.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-12.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-13.webp">
+<meta property="og:image" content="https://www.linuxliteos.com/assets/img/features/gallery/software.png">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-14.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-15.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-16.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-17.webp">
+<meta property="og:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-18.webp">
+<meta property="article:published_time" content="2023-02-03T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-24T03:49:33.567Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="fcitx">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="linuxlite">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jute.im/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-01.webp">
+
+
+<link rel="canonical" href="https://jute.im/linux/using-linux-lite-6-2-for-3-days/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/linux/using-linux-lite-6-2-for-3-days/","path":"linux/using-linux-lite-6-2-for-3-days/","title":"使用 Linux Lite 6.2 三天後的感想"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>使用 Linux Lite 6.2 三天後的感想 | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">快速回顧與感想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">3.</span> <span class="nav-text">後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/linux/using-linux-lite-6-2-for-3-days/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="使用 Linux Lite 6.2 三天後的感想 | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用 Linux Lite 6.2 三天後的感想
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-02-03 08:00:00" itemprop="dateCreated datePublished" datetime="2023-02-03T08:00:00+08:00">2023-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>4 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-01.webp" alt="usingLinuxLite6.2Ep02"/>
+
+<p>寫完 <a href="linux/linux-lite-6-2/" title="來玩 Linux Lite 6.2">來玩 Linux Lite 6.2</a> 時，在陰錯陽差之下，讓我決定要試著看看能不能讓 Linux Lite 6.2 走一趟 Long Stay。</p>
+<p>3 天後，我就寫出一篇使用上的感受與想法，主要是因為以 Long Stay 而言，Linux Lite 6.2 的表現還算不錯，但在我心中，Linux Lite 6.2 還有一些些不太到位的部分。</p>
+<h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><ol>
+<li><p>GUI 介面上的細節。<br> (1)官方的說明是「A familiar, Windows like Desktop with a free, Microsoft Office compatible Office Suite.」從下面 2 張圖來看的時候，第一印象真的跟我目前所使用的 Windows 10 好像，有異曲同工之妙，尤其，現在大部分的 Linux 預裝的瀏覽器多以 Firefox 為主，而 Linux Lite 6.2 則是使用 Google Chrome，對多數的 Windows 10 使用者而言，應該一下子會減少一大段距離感。只可惜就是停在第一印象，接續使用時，就會跟多數的 Linux 一樣，細膩度明顯不足，而且，我認為應該與系統語言支援度不夠仔細有關。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-02.webp" alt="usingLinuxLite6.2vsWindows10"><br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-03.webp" alt="usingLinuxLite6.2Ep01"><br><br> (2)下面這幾張圖截出來的原因是我選擇正體中文語系，安裝完第一次進入系統時，系統也一樣詢問我要不要把資料夾命名為中文，但，原本以英文命名的捷徑(或稱做是「替身」)，卻沒有跟著被改動。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-04.webp" alt="usingLinuxLite6.2Ep08"><br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-05.webp" alt="usingLinuxLite6.2Ep09"><br><br> (3)上述情形，會導致什麼狀況呢？一個最顯而易見的地方，就是安裝完的桌面初始捷徑(替身)，通通跑去「躲」起來。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-06.webp" alt="usingLinuxLite6.2Ep02"><br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-07.webp" alt="usingLinuxLite6.2Ep03">
+ </p>
+</li>
+<li><p>Lite Apps。<br> (1)Lite Welcome 很貼心。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-03.webp" alt="usingLinuxLite6.2Ep01"><br><br> (2)Help Manual 更厲害，而目前僅提供網頁版，如果能夠整合成為獨立的 App，我相信會更棒。(圖片來源：<a target="_blank" rel="noopener" href="https://www.linuxliteos.com/features.html">https://www.linuxliteos.com/features.html</a>)<br><img src="https://www.linuxliteos.com/assets/img/features/gallery/support.png"></p>
+</li>
+<li><p>中文支援與中文輸入法。<br> (1)我原本是自行安裝 fcitx(4)，然而，開啟「語言支援」進行處理後，竟然是把我原本設定好的 fcitx(4) 自動砍掉，再將 Fcitx5 安裝進來。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-08.webp" alt="usingLinuxLite6.2Ep06"><br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-09.webp" alt="usingLinuxLite6.2Ep07"><br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-10.webp" alt="usingLinuxLite6.2Ep10"><br> (2)以使用嘸蝦米而言，我並不想再另外安裝 fcitx5-table-extra，所以，就只好移除 Fcitx5，把 fcitx(4) 安裝與設定回來。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-11.webp" alt="usingLinuxLite6.2Ep11"><br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-12.webp" alt="usingLinuxLite6.2Ep12"><br><br> (3)問題是開啟「語言支援」時，還是會被不停地詢問，從套件名稱就很容易可以看得出來是要使用者安裝 Fcitx5。或許，會有伙伴認為，我是在堅持什麼，但我得說，今天我使用 Linux，就是希望保有我自己想要的自由度，這樣的做法，儘管可以無視，我相信多少還是扣分的。<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-13.webp" alt="usingLinuxLite6.2Ep14">
+ </p>
+</li>
+<li><p>Synaptic 套件管理員。<br> (1)官方提供的軟體管理程式，並不是「Synaptic 套件管理員」，我還滿期待能夠使用看看的。<br><img src="https://www.linuxliteos.com/assets/img/features/gallery/software.png"> (圖片來源：<a target="_blank" rel="noopener" href="https://www.linuxliteos.com/features.html">https://www.linuxliteos.com/features.html</a>)<br> (2)只是，我直接從系統介面去找來找去的，並沒有順利找到官方的工具，反倒是先找到「Synaptic 套件管理員」，這沒有什麼不好，只是，當我用過 MX Linix 與 Garuda Linux 之後，會覺得 MX Linux 與 Garuda Linux 的 App 設計得更棒、更直覺，同時也比較容易找得到(這麼說，可能有點不公平，…只能說，緣份、緣份吧！)<br><img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-14.webp" alt="usingLinuxLite6.2Ep18">
+ </p>
+</li>
+<li><p>系統執行穩定，但效能並不如預期。<br> (1)有關這一點，我並沒有使用任何工具進行測試，完全靠我自己的感覺去「測量」。<br> (2)硬體資訊大致如下<br>(A)機器：ASUSTeK model: M32CD_A_F_K20CD_K31CD<br>(B)處理器：Intel(R) Core(TM) i5-6400 CPU @ 2.70 GHz 2.70 GHz<br>(C)記憶體：16.0 GB<br>(D)硬碟：Western Digital model: WD5000AAKX-22ERMA0 500G 3.5吋SATA硬碟<br> (3)同樣的硬體，執行 MX Linux 與 Garuda Linux，都能夠用感覺，就感受得到 Linux Lite 6.2 的效能比較不若前面 2 隻企鵝那般，…跑得比較快。<br> (4)Linux Lite 6.2 給我的感覺是穩定，但效能就是差了一點。</p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>本次安裝使用的 ISO 檔版本是 linux-lite-6.2-64bit.iso。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.linuxliteos.com/">Linux Lite Easy to Use Free Linux Operating System</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://web.archive.org/web/20180927231718/http://linuxliteos.com/features.html">Free Operating System - Linux Lite</a></p>
+</li>
+<li><p>就我過往使用 Linux 至今，曾經有幾支 Distro 在我的機器上 Long Stay 過的，分別是 Fedora、Ubuntu、Arch Linux、Zorin OS、MX Linux 與 Garuda Linux，現階段若要我給出排名，我會這樣排(如下)。<br> (1)MX Linux<br> (2)Garuda Linux<br> (3)Arch Linux<br> (4)Fedora<br> (5)Zorin OS<br> (6)Ubuntu</p>
+</li>
+<li><p>承上，如果要把 Linux Lite 6.2 排進來的話，我會把它排在第 7 名。而且，經過 3 天的使用後，我因為受不了 Linux Lite 6.2 明顯讓我感到效能不如預期，而轉回去安裝 MX Linux。</p>
+</li>
+<li><p>最後，我想講一個題外話：大約從 111 年 9 月開始，所有的 Linux 都會碰上 DRM 這個硬傷。<br> <img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-15.webp" alt="usingLinuxLite6.2Ep16"></p>
+<p> 我目前的發現是在看 NBA 上面的影片時，無法正常播放。<br> <img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-16.webp" alt="usingLinuxLite6.2Ep15"></p>
+<p> Disney+ 沒有問題，但其他的，如：NetFlix，是不是有相同的狀況，我並沒有再去進一步驗證(…因為已退訂 NetFlix)。<br> <img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-17.webp" alt="DRMonMXLinux"></p>
+<p> 有趣的是這個狀況，似乎沒有任何直接解決的方法。初步爬文發現，有網友分享自己是用 VirtualBox 開 Windows 去觀看，但我認為這個方法實在繞太大圈，也有網友說明，想要等待 NBA 主動處理。</p>
+<p> 我的話，以前我會想方設法找到可以直接正面處理的方法，但…通常都有點耗時，現在就會想著，不如直接就用其他的系統來看就好，把時間保留給其他事務還比較有趣。</p>
+<p> <img src="/pics/linux/2023-02-03-using-linux-lite-6-2-for-3-days/using-linux-lite-6-2-for-3-days-18.webp" alt="Invalid DRM error with DRM_FAILED_LICENSE_REQUEST"></p>
+<p> 總之，這是一個見人見智的問題，只是，這麼多年來，使用起 Linux，就有點像當年使用 Classic Mac OS (詳見：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/Classic_Mac_OS">Classic Mac OS - 維基百科，自由的百科全書</a>)那般，總是有那麼點不開心吶～</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/fcitx/" rel="tag"># fcitx</a>
+              <a href="/tags/linuxlite/" rel="tag"># linuxlite</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/linux/linux-lite-6-2/" rel="prev" title="來玩 Linux Lite 6.2">
+                  <i class="fa fa-angle-left"></i> 來玩 Linux Lite 6.2
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/boshiamy/fcitx5-with-fcitx5-table-extra-on-ubuntu-22-04-1-lts/" rel="next" title="在 Ubuntu 22.04.1 LTS 上用 Fcitx5 搭配嘸蝦米 (feat. fcitx5-table-extra)">
+                  在 Ubuntu 22.04.1 LTS 上用 Fcitx5 搭配嘸蝦米 (feat. fcitx5-table-extra) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

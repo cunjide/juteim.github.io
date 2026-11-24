@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言紀錄一下 iOS 上「UrKeyboard 與嘸蝦米輸入法」的使用心得與設定流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UrKeyboard(iOS 版)與嘸蝦米輸入法">
+<meta property="og:url" content="https://jute.im/boshiamy/urkeyboard-and-boshiamy/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="前言紀錄一下 iOS 上「UrKeyboard 與嘸蝦米輸入法」的使用心得與設定流程。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-01.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-02.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-03.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-04.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-05.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-06.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-07.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-08.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-09.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-10.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-11.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-12.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-13.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-14.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-15.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-16.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-17.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-18.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-19.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-20.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-21.webp">
+<meta property="article:published_time" content="2025-02-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-24T03:49:33.537Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="apple">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="ios">
+<meta property="article:tag" content="嘸蝦米">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jute.im/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-01.webp">
+
+
+<link rel="canonical" href="https://jute.im/boshiamy/urkeyboard-and-boshiamy/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/boshiamy/urkeyboard-and-boshiamy/","path":"boshiamy/urkeyboard-and-boshiamy/","title":"UrKeyboard(iOS 版)與嘸蝦米輸入法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>UrKeyboard(iOS 版)與嘸蝦米輸入法 | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97"><span class="nav-number">2.</span> <span class="nav-text">使用心得</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95%E7%9A%84%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A"><span class="nav-number">3.</span> <span class="nav-text">使用嘸蝦米輸入法的相關設定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/boshiamy/urkeyboard-and-boshiamy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="UrKeyboard(iOS 版)與嘸蝦米輸入法 | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          UrKeyboard(iOS 版)與嘸蝦米輸入法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-02-12 08:00:00" itemprop="dateCreated datePublished" datetime="2025-02-12T08:00:00+08:00">2025-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>紀錄一下 iOS 上「UrKeyboard 與嘸蝦米輸入法」的使用心得與設定流程。<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-01.webp" alt="urkeyboardAndBoshiamyEp (22)"/></p>
+<h3 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h3><ol>
+<li><p>基本功能要價 120 元：UrKeyboard 算是很早就出現的第三方鍵盤，但，我當時可能是考量到「<a href="https://boshiamy.com/product_ixhiamy_2.php" target="_blank">蝦米鍵盤 2</a>」提供「基本打字免費」的功能，因此才跳過 UrKeyboard。</p>
+</li>
+<li><p>沒有廣告：這個心得，可能會讓不少人覺得奇怪。都已經完成付費，怎麼還會有廣告？事實是還真的有，那就是「<a href="https://boshiamy.com/product_ixhiamy_2.php" target="_blank">蝦米鍵盤 2</a>」：即使付費使用加購功能，在設定畫面裡，還是會看到廣告（所幸，只在設定畫面裡）。相較之下，UrKeyboard 的設定畫面，沒有廣告。</p>
+</li>
+<li><p>鍵盤的配置：算是合我的口味，而且，上方還有「功能列」，讓使用者可以快速切換到「英文」、「符號」、「簡中」等輸入。</p>
+</li>
+</ol>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-02.webp" alt="urkeyboardAndBoshiamyEp (28)"/>
+
+<ol start="4">
+<li><p>鍵盤載入及入字速度：無論是鍵盤載入，或是入字速度，我認為可接受，但總覺得可以更快。這一點，在 iOS 上，我比較滿意的是「<a target="_blank" rel="noopener" href="https://boshiamy.com/product_iacces_keyboard.php">嘸蝦米輸入法 iAcces Keyboard</a>」與「<a href="https://kaiboard.app/" target="_blank">Kaiboard</a>」。</p>
+</li>
+<li><p>其他：觸覺回饋設定後，沒有立即產生效果，但，我印象中，「<a href="https://boshiamy.com/product_ixhiamy_2.php" target="_blank">蝦米鍵盤 2</a>」、「<a target="_blank" rel="noopener" href="https://boshiamy.com/product_iacces_keyboard.php">嘸蝦米輸入法 iAcces Keyboard</a>」，也都是一樣，這一點，可能跟 iOS 有關，但，即使我按照各家第三方鍵盤的官方說明進行設定，只有「<a href="https://kaiboard.app/" target="_blank">Kaiboard</a>」可以設定成功。</p>
+</li>
+</ol>
+<h3 id="使用嘸蝦米輸入法的相關設定"><a href="#使用嘸蝦米輸入法的相關設定" class="headerlink" title="使用嘸蝦米輸入法的相關設定"></a>使用嘸蝦米輸入法的相關設定</h3><p>使用嘸蝦米輸入法前，只需要將表格檔載入就完成一大半。</p>
+<ol>
+<li>只是，表格檔的載入，若是照著使用說明：「如果你要找尋其它輸入法(如無蝦米)，請在首頁點擊『其它輸入法』！」，那麼，基本上會跑錯路。</li>
+</ol>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-03.webp" alt="urkeyboardAndBoshiamyEp (4)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-04.webp" alt="urkeyboardAndBoshiamyEp (5)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-05.webp" alt="urkeyboardAndBoshiamyEp (6)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-06.webp" alt="urkeyboardAndBoshiamyEp (7)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-07.webp" alt="urkeyboardAndBoshiamyEp (8)"/>
+
+<ol start="2">
+<li>重新回到首頁：「UrKeyboard 中文輸入法」這一個介面，才發現「蝦米.cin」才是正道，只要點【蝦米.cin】，就可以順利載入嘸蝦米表格檔。</li>
+</ol>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-08.webp" alt="urkeyboardAndBoshiamyEp (9)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-09.webp" alt="urkeyboardAndBoshiamyEp (10)"/>
+
+<ol start="3">
+<li>載入表格檔之後，原則上就可以使用。儘管如此，我還是跑一趟「設定」，看看裡面有什麼。大致上，我認為有 4 點是比較可惜的地方。<br>  (1)整個「設定」裡面，並沒有幫使用者導至 iOS 系統內的「鍵盤」設定區。<br>  (2)點擊「鍵盤按鍵配置」，App 偶爾會發生閃退。<br>  (3)鍵盤上方「功能列」最右手邊的【▼】按鈕，預設其實是沒有啟用的，但，使用時已預設啟用【▼】按鈕，不過，這個小瑕疵，對我的影響並不大。<br>  (4)最底下有個【登出】，我摸索一下，到目前為止，還不知道這個按鈕的作用。</li>
+</ol>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-10.webp" alt="urkeyboardAndBoshiamyEp (11)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-11.webp" alt="urkeyboardAndBoshiamyEp (12)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-12.webp" alt="urkeyboardAndBoshiamyEp (13)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-13.webp" alt="urkeyboardAndBoshiamyEp (14)"/>
+
+<ol start="4">
+<li>我想透過「允許完整取用」，看看能不能在入字的時候，產生觸覺回饋，…答案是「No」。</li>
+</ol>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-14.webp" alt="urkeyboardAndBoshiamyEp (15)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-15.webp" alt="urkeyboardAndBoshiamyEp (16)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-16.webp" alt="urkeyboardAndBoshiamyEp (17)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-17.webp" alt="urkeyboardAndBoshiamyEp (18)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-18.webp" alt="urkeyboardAndBoshiamyEp (19)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-19.webp" alt="urkeyboardAndBoshiamyEp (20)"/>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-20.webp" alt="urkeyboardAndBoshiamyEp (21)"/>
+
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>目前，我所使用的是 iPhone 13，iOS 版本是 18.3。</p>
+</li>
+<li><p>以下是我在 iOS 上使用過的嘸蝦米輸入法，各家有各家的優點，如果匯集這些優點，相信就會更完美。</p>
+</li>
+</ol>
+<img src="/pics/boshiamy/2025-02-12-urkeyboard-and-boshiamy/urkeyboard-and-boshiamy-21.webp" alt="urkeyboardAndBoshiamyEp (2)"/>
+
+<ol start="3">
+<li><p>UrKeyboard 也有 Android 版，但，我並不打算用，主要原因是官方的版本與 Fcitx5 for Android(小企鵝輸入法5) 就已經能夠滿足我在使用上的需求。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.zhihmeng.urkeyboard">UrKeyboard輸入法 - Google Play 應用程式</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/urkeyboard%E8%BC%B8%E5%85%A5%E6%B3%95/id898188878">在 App Store 上的「UrKeyboard輸入法」</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://blog.molioapp.com/2017/04/urkeyboard.html">MolioApp: UrKeyboard 介紹</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.facebook.com/urkeyboard/">UrKeyboard | Facebook</a></p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
+              <a href="/tags/ios/" rel="tag"># ios</a>
+              <a href="/tags/apple/" rel="tag"># apple</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/android/my-first-experience-of-private-space/" rel="prev" title="「私人空間」初體驗（feat. Pixel 7）">
+                  <i class="fa fa-angle-left"></i> 「私人空間」初體驗（feat. Pixel 7）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/reviews/bocchi-kouryaku/" rel="next" title="孤單一人的異世界攻略">
+                  孤單一人的異世界攻略 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

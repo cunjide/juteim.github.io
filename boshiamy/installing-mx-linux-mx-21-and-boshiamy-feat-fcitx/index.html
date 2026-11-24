@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安裝 MX Linux MX-21 與嘸蝦米 (feat. fcitx)">
+<meta property="og:url" content="https://jute.im/boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="前言">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-01.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-02.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-03.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-04.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-05.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-06.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-07.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-08.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-09.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-10.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-11.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-12.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-13.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-14.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-15.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-16.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-17.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-18.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-19.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-20.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-21.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-22.webp">
+<meta property="article:published_time" content="2022-01-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-24T03:49:32.866Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="debian">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="mxlinux">
+<meta property="article:tag" content="嘸蝦米">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-01.webp">
+
+
+<link rel="canonical" href="https://jute.im/boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/","path":"boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/","title":"安裝 MX Linux MX-21 與嘸蝦米 (feat. fcitx)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>安裝 MX Linux MX-21 與嘸蝦米 (feat. fcitx) | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-MX-Linux-MX-21"><span class="nav-number">2.</span> <span class="nav-text">安裝 MX Linux MX-21</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E5%98%B8%E8%9D%A6%E7%B1%B3"><span class="nav-number">3.</span> <span class="nav-text">安裝嘸蝦米</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%85%88%E8%A8%AD%E5%AE%9A%E5%A5%BD-XMODIFIERS"><span class="nav-number">3.1.</span> <span class="nav-text">1.先設定好 XMODIFIERS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%9D%E8%88%87%E8%A8%AD%E5%AE%9A-fcitx-%E8%88%87%E5%98%B8%E8%9D%A6%E7%B1%B3-1-CLI-%E4%BB%8B%E9%9D%A2%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">2.安裝與設定 fcitx 與嘸蝦米 - (1) CLI 介面安裝設定法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%9D%E8%88%87%E8%A8%AD%E5%AE%9A-fcitx-%E8%88%87%E5%98%B8%E8%9D%A6%E7%B1%B3-2-GUI-%E5%9C%96%E5%9E%8B%E4%BB%8B%E9%9D%A2%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">2.安裝與設定 fcitx 與嘸蝦米 - (2) GUI 圖型介面安裝設定法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E7%B5%82%E7%A2%BA%E8%AA%8D"><span class="nav-number">3.4.</span> <span class="nav-text">最終確認</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="安裝 MX Linux MX-21 與嘸蝦米 (feat. fcitx) | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          安裝 MX Linux MX-21 與嘸蝦米 (feat. fcitx)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-01-25 08:00:00" itemprop="dateCreated datePublished" datetime="2022-01-25T08:00:00+08:00">2022-01-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-01.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep16"/>
+
+<p>在 DistroWatch 可以看「網頁參觀排名」，目前排名第一的是 MX Linux，從 2014 年 3 月 24 日的初始版本至今約莫 7 個年頭，以現今的發行版 (Distro) 百家齊放的世代而言，有這樣的爬升速度肯定有它的原因。</p>
+<p>我尤其對 AHS (Advanced Hardware Support) 版感興趣，索性就拿一部實體機器與 VirtualBox 來安裝體驗一下。</p>
+<h3 id="安裝-MX-Linux-MX-21"><a href="#安裝-MX-Linux-MX-21" class="headerlink" title="安裝 MX Linux MX-21"></a>安裝 MX Linux MX-21</h3><p>以下是在 VirtualBox 的安裝過程截圖(點圖至 Flickr 瀏覽相簿) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-02.webp" alt="MXLinuxMX-21"></p>
+<h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><p>同樣是在 Linux 上搞定嘸蝦米，MX Linux 應該是我從去年至今，所有接觸到的 Linux 中，相對複雜的一支 Distro，所以，我的因應及處理過程也比較謹慎。(更新日期：2023 年 2 月 2 日)</p>
+<p>步驟的部分，可以分成 2 大區塊。</p>
+<ol>
+<li>先設定好 XMODIFIERS</li>
+<li>安裝與設定 fcitx 與嘸蝦米：大致可以分為 2 種，這 2 種也可以混搭使用，其實，文章更新前，我所走過的方法就是 2 者混搭服用的。<br>(1) CLI 介面安裝設定法<br>(2) GUI 圖型介面安裝設定法</li>
+</ol>
+<h4 id="1-先設定好-XMODIFIERS"><a href="#1-先設定好-XMODIFIERS" class="headerlink" title="1.先設定好 XMODIFIERS"></a>1.先設定好 XMODIFIERS</h4><ol>
+<li><p>下 <code>sudo vim /etc/enviroment</code> 這道指令。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-03.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep10-1"></p>
+</li>
+<li><p>進入 vim 編輯器的畫面後，將下列內容輸入進去後存檔離開。(下圖)</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
+<p> <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-04.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep10"></p>
+<p> 「複製貼上法」一直都是王道。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-05.webp" alt="XMODIFIERSonmxLinux"></p>
+</li>
+</ol>
+<h4 id="2-安裝與設定-fcitx-與嘸蝦米-1-CLI-介面安裝設定法"><a href="#2-安裝與設定-fcitx-與嘸蝦米-1-CLI-介面安裝設定法" class="headerlink" title="2.安裝與設定 fcitx 與嘸蝦米 - (1) CLI 介面安裝設定法"></a>2.安裝與設定 fcitx 與嘸蝦米 - (1) CLI 介面安裝設定法</h4><ol>
+<li><p>先下一道指令：<code>sudo apt search fcitx-table-boshiamy</code>，沒找到套件。<code>sudo apt update</code> 後，再搜尋一次，可以順利找出來。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-06.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep01"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-07.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep02"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-08.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep03"></p>
+</li>
+<li><p>下一道指令：<code>sudo apt install fcitx-table-boshiamy</code>，發現主程式並沒有經由相依套件一起安裝進來，而是在建議套件裡面。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-09.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep04"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-10.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep05"></p>
+</li>
+<li><p>再下一次指令把主程式也抓進來，再觀察相依套件後，下列是我最後下的指令。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-tools fcitx-ui* fcitx-config-* fcitx-module* fcitx-frontend-* fcitx-table-boshiamy fcitx-m17n</span><br></pre></td></tr></table></figure>
+<p> <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-11.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep06"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-12.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep07"></p>
+</li>
+<li><p>下 <code>cp /usr/share/applications/fcitx.desktop .config/autostart/</code> 這道指令，接著再下 <code>sudo reboot</code> 讓系統重開機。基本上，CLI 介面的安裝設定法，走到這邊就算告一段落。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-13.webp" alt="fcitxAutostartonMxLinux"></p>
+</li>
+</ol>
+<h4 id="2-安裝與設定-fcitx-與嘸蝦米-2-GUI-圖型介面安裝設定法"><a href="#2-安裝與設定-fcitx-與嘸蝦米-2-GUI-圖型介面安裝設定法" class="headerlink" title="2.安裝與設定 fcitx 與嘸蝦米 - (2) GUI 圖型介面安裝設定法"></a>2.安裝與設定 fcitx 與嘸蝦米 - (2) GUI 圖型介面安裝設定法</h4><ol>
+<li><p>開啟「MX 軟體安裝工具」，並且搜尋關鍵字：<code>fcitx</code>，找到「Chinese_Input_fcitx」 後，勾選並按下右下角的「安裝」。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-14.webp" alt="installChinese_Input_fcitxonMX軟體安裝工具"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-15.webp" alt="installChinese_input_fcitxonMX軟體安裝工具(Window)"></p>
+</li>
+<li><p>接著，繼續在「MX 軟體安裝工具」作業：從「安定倉庫」頁籤進去，搜尋關鍵字：<code>fcitx-table-boshiamy</code>，同樣勾選後進行安裝。(下圖所示是我還沒有完整打完，就可以找到要安裝的套件） <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-16.webp" alt="installfcitx-table-boshiamyonMX軟體安裝工具"></p>
+</li>
+<li><p>點出開始功能表，使用關鍵字「start」，找出「工作階段與啟動」這個設定介面。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-17.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep13"></p>
+</li>
+<li><p>在「應用程式自動啟動」新增 fcitx 指令，名稱與敘述我就隨便命名，萬一搞錯的話，想讓自己好找就好。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-18.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep14"></p>
+</li>
+</ol>
+<h4 id="最終確認"><a href="#最終確認" class="headerlink" title="最終確認"></a>最終確認</h4><ol>
+<li><p>無論使用哪一種方法，重新啟動系統後，靜靜地等待左側工作列上的 fcitx 小鍵盤圖示能否順利載入。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-19.webp" alt="fcitxICONonMenuBar(FullWindow)"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-20.webp" alt="fcitxICONonMenuBar">    </p>
+</li>
+<li><p>有出現的話，就賓果，不用客氣，直接點餐，開心吃蝦啦！ <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-21.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep15"></p>
+<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-22.webp" alt="installingFcitx(4)andBoshiamyonMXLinuxMX-21Ep16"></p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>MX Linux 是少數我還沒有在 VirtualBox 上體驗，就決定安裝在實機上的 Distro，雖然，要在 MX Linux MX-21 搞定嘸蝦米輸入法，讓我費了不少功夫，但，我認真思考後，現階段會以這支 Distro 為主力，跟 Fedora 與 Clear Linux 暫時先說聲再見。</p>
+</li>
+<li><p>處理嘸蝦米中文輸入法的部分，事後發現，可以透過「MX 軟體安裝工具」來處理。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mxlinux.org/">MX Linux – Midweight Simple Stable Desktop OS</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://fcitx-im.org/wiki/Fcitx/zh-hans">小企鹅输入法 (Fcitx) - Fcitx</a></p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/mxlinux/" rel="tag"># mxlinux</a>
+              <a href="/tags/debian/" rel="tag"># debian</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/boshiamy/installing-lubuntu-21-10-and-boshiamy/" rel="prev" title="安裝 Lubuntu 21.10 與嘸蝦米">
+                  <i class="fa fa-angle-left"></i> 安裝 Lubuntu 21.10 與嘸蝦米
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/boshiamy/installing-linux-mint-20-3-cinnamon-and-boshiamy-feat-fcitx/" rel="next" title="安裝 Linux Mint 20.3 Cinnamon 與嘸蝦米 (feat. fcitx)">
+                  安裝 Linux Mint 20.3 Cinnamon 與嘸蝦米 (feat. fcitx) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

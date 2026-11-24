@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言 解決的關鍵工具是 diskmgmt.msc 與 diskpart。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息">
+<meta property="og:url" content="https://jute.im/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="前言 解決的關鍵工具是 diskmgmt.msc 與 diskpart。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-01.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-02.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-03.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-01.webp">
+<meta property="article:published_time" content="2021-08-13T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-24T03:49:32.641Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="apfs">
+<meta property="article:tag" content="bootcamp">
+<meta property="article:tag" content="diskmgmt">
+<meta property="article:tag" content="diskpart">
+<meta property="article:tag" content="fusiondrive">
+<meta property="article:tag" content="highsierra">
+<meta property="article:tag" content="macos">
+<meta property="article:tag" content="mojave">
+<meta property="article:tag" content="windows10">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jute.im/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-01.webp">
+
+
+<link rel="canonical" href="https://jute.im/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/","path":"apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/","title":"搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息 | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E9%81%8E%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">故障排除過程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">3.</span> <span class="nav-text">後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息 | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-08-13 08:00:00" itemprop="dateCreated datePublished" datetime="2021-08-13T08:00:00+08:00">2021-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/apple/" itemprop="url" rel="index"><span itemprop="name">apple</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>819</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>2 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-01.webp"> 解決的關鍵工具是 <code>diskmgmt.msc</code> 與 <code>diskpart</code>。</p>
+<p>以前，我使用 Bootcamp(啟動切換) 都沒有遇到什麼大問題，想不到，今次來個大的：</p>
+<blockquote>
+<p>Windows 找不到在自動安裝回應檔案之 <code>&lt;ImageInstall&gt;</code> 設定中指定的磁碟與磁碟分割。請確定該設定參照到有效的磁碟分割，然後重新啟動安裝程式。</p>
+</blockquote>
+<p>這一個問題被我認為有點大，一方面，網路上的資料很少，有些是提到把 USB 外接儲存裝置移走就可以解決，這個解法對我來說並不適用；另外一方面，從大家的分享與回應來看，除了把 USB 外接儲存裝置移走就可以解決的，其他似乎都沒有被處理好。</p>
+<h3 id="故障排除過程"><a href="#故障排除過程" class="headerlink" title="故障排除過程"></a>故障排除過程</h3><p>由於手上沒有厲害的硬碟工具，我用現有的工具，花了不少時間才搞定，幾個重點程序，在此紀錄下來：</p>
+<ol>
+<li><p>問題研判：從「Windows 找不到在自動安裝回應檔案之 <code>&lt;ImageInstall&gt;</code> 設定中指定的磁碟與磁碟分割。」這段話就可以知道，問題出在硬碟分割，有鑑於以往都可以輕鬆做完 Bootcamp，這一次不太容易，有比較大的可能是前不久安裝 Linux 去動到硬碟分割。</p>
+</li>
+<li><p>備好 macOS Mojave 的可開機 SD 卡：之前我都是用 High Sierra，並沒有太大的問題，但是，這一次我製作裝有 macOS Mojave 的可開機 SD 卡，準備重新安裝。</p>
+</li>
+<li><p>硬碟分割要完整重置：後再重新跑一趟全新安裝，我的做法是用 Windows 外接硬碟開機後，用 <code>diskmgmt.msc</code> 與 <code>diskpart</code> 搭配給硬碟「動手術」：把所有的分割表都刪除。<img src="/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-02.webp"></p>
+</li>
+<li><p>重新安裝 macOS Mojave：<br> (1)經過步驟 3，Fusion Drive 是被分開的，需要重新製作。<br> (2)做好 Fusion Drive 後，我再經過一道程序，把 Fusion Drive 的格式改為「Apple 檔案系統」(APFS)。<br> (3)安裝好 macOS 之後，要把 Mojave 能夠升級的升好升滿，升級好的 Bootcamp(啟動切換) 會判斷 iMac 上有沒有插著其他 USB 儲存裝置，以及辨識 Windows ISO 檔與 iMac 的相容性，說也奇怪，我用微軟官網上的「Windows 10 媒體建立工具」下載最新的 ISO 檔，會被 macOS Mojave 上最新版的 Bootcamp(啟動切換) 判定是不相容的，害我再三確認是不是 64 位元，下載 3 次之後都失敗就直接放棄。</p>
+</li>
+<li><p>準備好要安裝的 Windows ISO 檔：<br> (1)我試過最新的 21H1、之前的 20H2 都沒有成功，最後是用 1903 才搞定。<br> (2)成功之前，一直選用「Window 專業版」，最後一次，想著再不成功就不繼續在眼前的 iMac 搞 Bootcamp(啟動切換) ，而改用「Windows 家用版」順利安裝進去。<br> (3)或許，「Window 專業版」也能成功，只是，偏偏最後一次，我沒有嘗試。<img src="/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-03.webp"> <img src="/pics/apple/2021-08-13-fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac-01.webp"></p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>其實，應該有另外一種解決方式：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/windows-hardware/customize/desktop/unattend/microsoft-windows-setup-imageinstall" title="ImageInstall | Microsoft Docs">ImageInstall | Microsoft Docs</a>，我沒有嘗試是因為我認為依照蘋果的精神，一般是不會要使用者去用這樣的方式處理。</p>
+</li>
+<li><p>再者，如果手上有硬碟相關的程式，應該可以省下不少時間。</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/windows10/" rel="tag"># windows10</a>
+              <a href="/tags/macos/" rel="tag"># macos</a>
+              <a href="/tags/highsierra/" rel="tag"># highsierra</a>
+              <a href="/tags/fusiondrive/" rel="tag"># fusiondrive</a>
+              <a href="/tags/mojave/" rel="tag"># mojave</a>
+              <a href="/tags/apfs/" rel="tag"># apfs</a>
+              <a href="/tags/bootcamp/" rel="tag"># bootcamp</a>
+              <a href="/tags/diskmgmt/" rel="tag"># diskmgmt</a>
+              <a href="/tags/diskpart/" rel="tag"># diskpart</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/apple/making-a-dual-bootable-flash-drive-on-my-imac/" rel="prev" title="在我的 iMac 上製作雙系統的隨身碟">
+                  <i class="fa fa-angle-left"></i> 在我的 iMac 上製作雙系統的隨身碟
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/linux/installing-virtualbox-6-1-26-on-clear-linux/" rel="next" title="在 Clear Linux 上安裝 VirtualBox 6.1.26">
+                  在 Clear Linux 上安裝 VirtualBox 6.1.26 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

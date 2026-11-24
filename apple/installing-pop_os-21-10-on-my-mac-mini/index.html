@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在我的 Mac mini 上安裝 Pop!_OS 21.10">
+<meta property="og:url" content="https://jute.im/apple/installing-pop_os-21-10-on-my-mac-mini/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="前言">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-01.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-02.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-03.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-04.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-05.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-06.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-01.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-07.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-08.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-09.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-10.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-11.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-12.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-13.webp">
+<meta property="og:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-14.webp">
+<meta property="article:published_time" content="2021-12-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-24T03:49:32.881Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="davinciresolve17">
+<meta property="article:tag" content="highsierra">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="macmini">
+<meta property="article:tag" content="macos">
+<meta property="article:tag" content="mojave">
+<meta property="article:tag" content="pop_os">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="嘸蝦米">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jute.im/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-01.webp">
+
+
+<link rel="canonical" href="https://jute.im/apple/installing-pop_os-21-10-on-my-mac-mini/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/apple/installing-pop_os-21-10-on-my-mac-mini/","path":"apple/installing-pop_os-21-10-on-my-mac-mini/","title":"在我的 Mac mini 上安裝 Pop!_OS 21.10"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>在我的 Mac mini 上安裝 Pop!_OS 21.10 | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-Pop-OS-21-10"><span class="nav-number">2.</span> <span class="nav-text">安裝 Pop!_OS 21.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E5%98%B8%E8%9D%A6%E7%B1%B3"><span class="nav-number">3.</span> <span class="nav-text">安裝嘸蝦米</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-DaVinci-Resolve-17"><span class="nav-number">4.</span> <span class="nav-text">安裝 DaVinci Resolve 17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/apple/installing-pop_os-21-10-on-my-mac-mini/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="在我的 Mac mini 上安裝 Pop!_OS 21.10 | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在我的 Mac mini 上安裝 Pop!_OS 21.10
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-12-25 08:00:00" itemprop="dateCreated datePublished" datetime="2021-12-25T08:00:00+08:00">2021-12-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/apple/" itemprop="url" rel="index"><span itemprop="name">apple</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>834</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>2 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-01.webp"></p>
+<p>Mac mini 2014 年末的機器，算不算老？</p>
+<p>不久前，我在一部親友淘汰的機器上 <a target="_blank" rel="noopener" href="http://mtmatt.page/linux/installing-pop_os-21-04-and-boshiamy/">安裝 Pop!_OS 21.04 與嘸蝦米</a>，讓一部跑起 Windows 7 已氣喘呼呼的機器，轉而成為文書工作小幫手。</p>
+<p>今天，我會再對 Mac mini 下手，原因是我想用 <a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a>，順順跑的 macOS High Sierra 已不支援，原以為系統將系統升級到 macOS Mojave 應該會比較快，想不到這個升級就花掉 1 小時又 10 分鐘左右。</p>
+<p><img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-02.webp"></p>
+<p>升級完 macOS Mojave 之後，<a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a> 硬是卡在安裝過程，光是解開安裝檔的虛擬硬碟，就讓記憶體直接被吃好吃滿，Finder 當掉好幾次之後，我就決定把方向轉到 Linux 身上。</p>
+<p><img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-03.webp"></p>
+<h3 id="安裝-Pop-OS-21-10"><a href="#安裝-Pop-OS-21-10" class="headerlink" title="安裝 Pop!_OS 21.10"></a>安裝 Pop!_OS 21.10</h3><ol>
+<li><p>先處理硬碟：我的做法是把久久未用的 Bootcamp 刪除，分割給 Linux 安裝與使用。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-04.webp"> <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-05.webp"></p>
+</li>
+<li><p>Pop!_OS 21.10 要求 &#x2F;boot 至少要 500MB，我再分割 2GB 給 Swap，其他的硬碟空間就掛載在 &#x2F; 這裡。(這樣，算是簡單粗暴嗎？) <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-06.webp"></p>
+</li>
+<li><p>快速完成：我自己對 Ubuntu 與它的衍生版本的觀察，硬碟分割好的下一步，不用等太久，就可以重新開機(下圖)。但，重開機後，畫面黑中帶光，我一度以為安裝失敗，還好稍稍耐著性子，就看到右下角若隱若現的鼠標，不久後就會進到系統登入畫面。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-01.webp"></p>
+</li>
+</ol>
+<h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><ol>
+<li><p>先從嘸蝦米官網將 iBus 表格檔載回來安裝，之前曾經在 <a target="_blank" rel="noopener" href="http://mtmatt.page/linux/installing-ibus-table-for-boshiamy-on-Ubuntu-20-04-lts/">在 Ubuntu 20.04 安裝官方嘸蝦米的 iBus 表格檔</a> 分享過對應的表格檔版本。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-07.webp"></p>
+</li>
+<li><p>安裝好之後，再到「設定值」裡面的「鍵盤」，點「+」(加號)把「中文(嘸蝦米-繁)」加進來。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-08.webp"></p>
+</li>
+<li><p>如果在這裡沒有看到嘸蝦米的話，要重新登入或是重新開機。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-09.webp"></p>
+</li>
+</ol>
+<h3 id="安裝-DaVinci-Resolve-17"><a href="#安裝-DaVinci-Resolve-17" class="headerlink" title="安裝 DaVinci Resolve 17"></a>安裝 DaVinci Resolve 17</h3><ol>
+<li><p>這是我今天的主要目的，但我認為很有可能安裝不起來，或是安裝完之後，也無法使用。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-10.webp"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a> 官方提供的檔案裡，就有安裝的相關說明，我按表操課就順利安裝上來。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-11.webp"></p>
+</li>
+<li><p>嗯，目前還是無法使用，我嘗試調整一些 GPU 的設定，觀察到這部老 Mac mini 應該無法使用 <a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a>。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-12.webp"></p>
+</li>
+<li><p>2014 年末 Mac mini 是真的夠老了，也不好太為難它，姑且，另外找一部 Wintel 的機器來跑 <a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a>！ <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-13.webp"></p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>參考網站： (1)<a target="_blank" rel="noopener" href="https://pop.system76.com/">Pop!_OS by System76</a> (2)<a target="_blank" rel="noopener" href="https://system76.com/">System76 - Linux Laptops, Desktops, and Servers</a> (3)<a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a> (4)<a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17 | Blackmagic Design</a> (5)<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Wintel">Wintel - 維基百科，自由的百科全書</a></p>
+</li>
+<li><p>本次安裝使用的 ISO 檔版本是 pop-os_21.10_amd64_intel_3.iso。</p>
+</li>
+<li><p>硬體：Mac mini 2014 年末。 <img src="/pics/apple/2021-12-25-installing-pop_os-21-10-on-my-mac-mini/installing-pop_os-21-10-on-my-mac-mini-14.webp"></p>
+</li>
+<li><p>有別於上次佔滿整部 Mac mini 的 Arch Linux 被我砍掉，今次走的是雙系統，而且這次的 Pop!_OS 21.10 我原則上會先保留，需要用到 iTunes、相簿與 iMovie 時，我再切換到 macOS，而切換的方式「只能」在開機時按住 Option 鍵，再找到我想使用的系統，這一點非常合我意。</p>
+</li>
+<li><p>macOS Mojave 在這一部 Mac mini 上的效能，實在讓人難以接受，我已經趕在聖誕節結束前，砍掉 macOS Mojave，灌回 macOS High Sierra。</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/macos/" rel="tag"># macos</a>
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+              <a href="/tags/highsierra/" rel="tag"># highsierra</a>
+              <a href="/tags/mojave/" rel="tag"># mojave</a>
+              <a href="/tags/macmini/" rel="tag"># macmini</a>
+              <a href="/tags/davinciresolve17/" rel="tag"># davinciresolve17</a>
+              <a href="/tags/pop-os/" rel="tag"># pop_os</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/windows/downgrade-back-to-windows-10/" rel="prev" title="降刷回 Windows 10 (升級 Windows 11 的 73 天後)">
+                  <i class="fa fa-angle-left"></i> 降刷回 Windows 10 (升級 Windows 11 的 73 天後)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/linux/installing-visual-studio-code-on-ubuntu-20-04-lts/" rel="next" title="在 Ubuntu 20.04.3 LTS 上安裝 Visual Studio Code">
+                  在 Ubuntu 20.04.3 LTS 上安裝 Visual Studio Code <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

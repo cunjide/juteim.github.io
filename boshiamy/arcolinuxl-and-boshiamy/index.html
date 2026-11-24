@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言喜歡 Arch Linux，或是說想要嘗試 Arch Linux，卻被一開始的暗黑安裝畫面給擊退的伙伴，其實有很多不同的選擇。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArcoLinuxL 與嘸蝦米">
+<meta property="og:url" content="https://jute.im/boshiamy/arcolinuxl-and-boshiamy/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="前言喜歡 Arch Linux，或是說想要嘗試 Arch Linux，卻被一開始的暗黑安裝畫面給擊退的伙伴，其實有很多不同的選擇。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-01.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-02.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-03.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-04.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-05.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-06.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-07.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-08.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-09.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-10.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-11.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-12.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-13.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-14.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-15.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-16.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-17.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-18.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-19.webp">
+<meta property="og:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-01.webp">
+<meta property="article:published_time" content="2022-05-08T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-24T03:49:32.421Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="fcitx5-table-extra">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="嘸蝦米">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jute.im/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-01.webp">
+
+
+<link rel="canonical" href="https://jute.im/boshiamy/arcolinuxl-and-boshiamy/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/boshiamy/arcolinuxl-and-boshiamy/","path":"boshiamy/arcolinuxl-and-boshiamy/","title":"ArcoLinuxL 與嘸蝦米"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ArcoLinuxL 與嘸蝦米 | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E9%81%8E%E7%A8%8B%E6%88%AA%E5%9C%96"><span class="nav-number">2.</span> <span class="nav-text">安裝過程截圖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7"><span class="nav-number">3.</span> <span class="nav-text">快速回顧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">安裝嘸蝦米輸入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/boshiamy/arcolinuxl-and-boshiamy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="ArcoLinuxL 與嘸蝦米 | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ArcoLinuxL 與嘸蝦米
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-05-08 08:00:00" itemprop="dateCreated datePublished" datetime="2022-05-08T08:00:00+08:00">2022-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>883</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>2 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>喜歡 Arch Linux，或是說想要嘗試 Arch Linux，卻被一開始的暗黑安裝畫面給擊退的伙伴，其實有很多不同的選擇。<img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-01.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp22"></p>
+<p>今天，來紀錄一下另外一支，比較接近原生 Arch Linux 的衍生發行版的安裝與使用的快速回顧。</p>
+<p>這支 Distro 名為 ArcoLinux，截至本文完稿前，它在 DistroWatch 上的排名在第 21 名。</p>
+<h3 id="安裝過程截圖"><a href="#安裝過程截圖" class="headerlink" title="安裝過程截圖"></a>安裝過程截圖</h3><p>一樣，我是用 VirtualBox 來體驗 ArcoLinux，從虛擬光礙讀到的光碟 ISO 檔進入系統後，畫面會直接跳出 ArcoLinux Welcome App。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-02.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp1"></p>
+<p>我第一件事，就是按下「Update Arch Linux Mirrors」這個按鈕。但，我忘了去看 Mirrors 是不是真的有被 Update。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-03.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp2"></p>
+<p>再來，我選擇 Easy Installation 啟動 ArcoLinux Installer。( 下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-04.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp3"></p>
+<p>切換到繁體中文。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-05.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp4"></p>
+<p>設定位置。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-06.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp5"></p>
+<p>設定鍵盤。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-07.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp6"></p>
+<p>設定硬碟分割，預設並不是 btrfs，但我現在想用這個格式。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-08.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp7"></p>
+<p>設定使用者，我發現…，不用密碼也可過得去，這樣好像不太好，建議還是設定一下比較妥。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-09.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp8"></p>
+<p>安裝前，做最後的確認。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-10.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp9"></p>
+<p><img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-11.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp10"></p>
+<p>因為最近安裝任何一支 Distro 的 Linux，大約都花費 15 分鐘，索性就將機器放著，去做點別的事，所以，我沒有注意，也沒有再去查究竟花多少時間完成安裝。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-12.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp11"></p>
+<p><img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-13.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp12"></p>
+<p>安裝完重新啟動後，來到 GRUB 畫面。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-14.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp13"></p>
+<p>登入畫面，滿有現代感的。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-15.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp14"></p>
+<p>系統剛安裝完之後，剛進入系統，就會有更新通知，強烈建議，在一開始就先將這些補丁通通打上去。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-16.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp15"></p>
+<p>從 Terminal 來看看 VirtualBox 虛擬出來的機器規格。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-17.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp16"></p>
+<h3 id="快速回顧"><a href="#快速回顧" class="headerlink" title="快速回顧"></a>快速回顧</h3><p>圖形介面安裝：其實，試著記下圖形介面的安裝過程，就不難發現，在 Terminal 進行安裝，要做的事也差不就是那些。所以，我相信 ArcoLinux 想要做的不只是好安裝而已。</p>
+<p>ArcoLinux Tweak Tool：現在滿多 Distro 都會做專屬自己的輔助 App，例如：Garuda Linux 的 Setup Assistant，在 ArcoLinux 上，則是一支名為 ArcoLinux Tweak Tool 的 App。這支 App 可以說是能夠 Tweak 山 Tweak 海的，比較更惜的是沒有 Tweak 亞洲語系的文字顯示與輸入法。(下圖) <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-18.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp18"></p>
+<h3 id="安裝嘸蝦米輸入法"><a href="#安裝嘸蝦米輸入法" class="headerlink" title="安裝嘸蝦米輸入法"></a>安裝嘸蝦米輸入法</h3><p>既然是 Arch Linux 衍生發行版，基本上就用一樣的方式服用即可，大致的步驟如下。</p>
+<ol>
+<li><p>啟動 Terminal，並輸入以下的指令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S vim fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-table-extra</span><br><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>啟動 vim 編輯，寫入以下內容 (直接從這裡複製貼上服用也行)</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重開機。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重開機之後，右下角會出現一個鍵盤圖示，點右鍵進入「設定」。 <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-19.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp20"></p>
+</li>
+<li><p>在設定視窗裡，找到「可用輸入法：」下的搜尋框，我是打關鍵字「bosh」把嘸蝦米找出來並新增。 <img src="/pics/boshiamy/2022-05-08-arcolinuxl-and-boshiamy/arcolinuxl-and-boshiamy-01.webp" alt="installingArcoLinuxLv22.05onVirtualBoxEp22"></p>
+</li>
+<li><p>Ctrl+Space，看到右下角的鍵盤圖示轉成紅色的「嘸」，就表示可以切換並使用嘸蝦米輸入法。</p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>下載 ArcoLinux 時，會發現有 L、S、D 與 B 總共 4 個版本(透過 Torrent 的話，還有一個 Lts 版)，可供使用者選用，如果不是很清楚的話，記得先到 <a target="_blank" rel="noopener" href="https://www.arcolinux.info/what-to-choose/">What to choose | ArcoLinux</a> 這裡，這張頁面最底下有圖解這幾個版本的不一樣之處在哪裡。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/apple/cp-value-of-protecting-product-for-iphone/" rel="prev" title="行動裝置上的螢幕保護貼性價比的選擇與思考">
+                  <i class="fa fa-angle-left"></i> 行動裝置上的螢幕保護貼性價比的選擇與思考
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/linux/20-days-after-shifting-to-garuda-linux/" rel="next" title="轉換至 Garuda Linux 之 20 天後">
+                  轉換至 Garuda Linux 之 20 天後 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

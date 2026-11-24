@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-jute.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-jute.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-jute.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jute.im","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="如果大家跟著前面幾篇的分享實做，很順利開門，看到黃狗背對著你，那麼，你已經進入圖形化的安裝畫面，稍等個幾秒，Welcome to Yellow Dog Linux幾個字樣就活生生地出現在左上角，請按右下角的Next，進入下一個畫面，接下來的部分多半不會很難，我大致說明一下。 1.Language Selection：選「繁體中文」吧，想練英文，或者英文、其他外語程度好的人想怎樣就怎樣吧！這個不會對">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安裝 Yellow Dog Linux - 第 4 步">
+<meta property="og:url" content="https://jute.im/linux/installing-yellow-dog-linux-step-4/index.html">
+<meta property="og:site_name" content="存記">
+<meta property="og:description" content="如果大家跟著前面幾篇的分享實做，很順利開門，看到黃狗背對著你，那麼，你已經進入圖形化的安裝畫面，稍等個幾秒，Welcome to Yellow Dog Linux幾個字樣就活生生地出現在左上角，請按右下角的Next，進入下一個畫面，接下來的部分多半不會很難，我大致說明一下。 1.Language Selection：選「繁體中文」吧，想練英文，或者英文、其他外語程度好的人想怎樣就怎樣吧！這個不會對">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2005-07-18T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-01T13:57:12.000Z">
+<meta property="article:author" content="cunji.de">
+<meta property="article:tag" content="apple">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://jute.im/linux/installing-yellow-dog-linux-step-4/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://jute.im/linux/installing-yellow-dog-linux-step-4/","path":"linux/installing-yellow-dog-linux-step-4/","title":"安裝 Yellow Dog Linux - 第 4 步"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>安裝 Yellow Dog Linux - 第 4 步 | 存記</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4821894216366631" crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">存記</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走過的痕跡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">185</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">300</span></a></li><li class="menu-item menu-item-privacy"><a href="/privacy/" rel="section"><i class="fa fa-shield-alt fa-fw"></i>隱私權政策</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">cunji.de</p>
+  <div class="site-description" itemprop="description">動漫．追劇．蝦米大叔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">300</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+<div class="sidebar-inner" style="margin-top: 12px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4821894216366631"
+       data-ad-slot="5237393196"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script data-pjax>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jute.im/linux/installing-yellow-dog-linux-step-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cunji.de">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="存記">
+      <meta itemprop="description" content="動漫．追劇．蝦米大叔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="安裝 Yellow Dog Linux - 第 4 步 | 存記">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          安裝 Yellow Dog Linux - 第 4 步
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2005-07-18 08:00:00" itemprop="dateCreated datePublished" datetime="2005-07-18T08:00:00+08:00">2005-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>如果大家跟著前面幾篇的分享實做，很順利開門，看到黃狗背對著你，那麼，你已經進入圖形化的安裝畫面，稍等個幾秒，Welcome to Yellow Dog Linux幾個字樣就活生生地出現在左上角，請按右下角的Next，進入下一個畫面，接下來的部分多半不會很難，我大致說明一下。</p>
+<p>1.Language Selection：選「繁體中文」吧，想練英文，或者英文、其他外語程度好的人想怎樣就怎樣吧！這個不會對安裝後有太大的影響。</p>
+<p>2.鍵盤設定（Keyboard Configuration）：一般而言，選U.S. English，其他的請找一下，大部分都找得到→對不起，這應該算是廢言。</p>
+<p>3.滑鼠設定：大致上，使用蘋果原廠單鍵鼠（Apple Desktop Bus Mouse II）的人，請直接按下一步，其他使用USB擴充卡等再接上滑鼠的人，YDL也多半抓得到。</p>
+<p>4.安裝類型：此時，YDL要我們選擇安裝後，這一部電腦的用途，共有四個選項：個人桌面、工作站、伺服器以及自訂安裝，由於我是要使用伺服器，所以就直接選擇該項目。※要注意的是其他的套件在後續的步驟會再請我們選擇，所以在這裡，主要就是選擇該系統未來運作時的用途。</p>
+<p>5.選擇磁碟分割方式：共有三個選項：自動分割硬碟、使用 Disk Druid 分割硬碟與Manually partition with pdisk (experts only)，建議選取「使用 Disk Druid 分割硬碟」進入下一步：磁碟設定。</p>
+<p>6.磁碟設定：設定分割區這個部分很重要，我多花點筆墨闡述一下。我的情形是二顆硬碟，第一顆原則上不用動到它，第二顆早先是分割於Mac OS所使用的硬碟，在此，就必需將裡面的分割區一一刪除。在我的硬碟列表中，YDL列出sda、sdb二個硬碟，sda不動，sdb內還分為&#x2F;dev&#x2F;sdb1～&#x2F;dev&#x2F;sdb5以及剩餘空間，基本上除了&#x2F;dev&#x2F;sdb1的類型為Apple這一塊無法被刪除，即使想刪也不會在這邊被刪掉外，其餘的，請都給它刪掉吧！刪掉後，就是一堆剩餘空間。緊接著，用新增的方式分配這些整理出來的剩餘空間，在YDL 2.3當中，我記得要劃出10MB的BootLoader、256MB（建議值）的Linux Swap，其餘的可以分為ext2…等初使用硬碟分配方式，在YDL 3.0.1，初使用或者對LInux還不甚了解的人，建議劃分為256MB（建議值）的Swap與以及檔案系統掛載點為”&#x2F;“的ext3二個部分就可以，順序上先劃Swap，其次ext3，而我的分配方式是512MB的Swap，其餘的都給ext3（用「填滿分割區至可獲得的最大值」→個人覺得這句話的翻譯超爛）。</p>
+<p>7.開機管理程式設定：這裡，即使用繁體中文的安裝說明語言，它還是一段英文字，不仔細看就給它跳過去的初使用者，在安裝完就會出狀況，YDL 2.3也有類似的訊息，但是2.3是在安裝最後才出現。到底，它是要做什麼呢？大家都還記得BootX吧！OldWorld的機器，得藉由它進入Linux，而這裡，就是告訴我們，待會兒安裝完，必須設定的系統載入點。以我的情形而言，在上一個步驟中，以ext3的分割區&#x2F;dev&#x2F;sdb3就是安裝完必須設定的載點。這一個步驟非常重要，對於初使用者而言，也是最容易忽略的地方。</p>
+<p>8.防火牆設定：初使用者，請選「中安全性」的系統安全等級，以及使用預設的防火牆設定吧！</p>
+<p>9.額外的語系支援：可以選擇Chinese（Taiwan），但是我比較不建議應用系統預設語言設定為Chinese（Taiwan），覺得這一個版本對中文的部分還沒有完善的支援，但是在此選用有個好處，在開機後的登入畫面中再設定語系，還是可以看得到親切的中文介面以及使用不是很優的中文輸入法。</p>
+<p>10.時區選擇：這個就不用解釋啦！</p>
+<p>11.帳號設定：分二個部分，設定 Root 的密碼，以及增加其他使用者帳號並設定密碼。</p>
+<p>12.套件設定：先是問我們要「接受目前的套件清單」或是「自訂要安裝的套件組」，如果不改變套件，就到下一步，而我，想要自訂套件，所以選擇第二個，安裝程式會把我帶到「選擇套件群組」。</p>
+<p>13.選擇套件群組：分為桌面、應用程式、伺服器、程式開發…等等。硬碟空間夠大，當然都給它選取，不過大部分，大家還是會選用得到的，以我而言，就幾乎把伺服器的部分全選進來。</p>
+<p>14.準備安裝：把所有的安裝光碟準備好吧！</p>
+<p>15.安裝套件中：這裡，要換片時，安裝程式會將光碟跳出，並且請我們放入其他的安裝光碟。</p>
+<p>完成安裝後，重新開機再次來到BootX這邊，請填入正確的Root Device。</p>
+<p>一切順利的話，終於，進入Yellow Dog Linux的世界，在老Mac上有新的感受與發現。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/apple/" rel="tag"># apple</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/linux/installing-yellow-dog-linux-step-3/" rel="prev" title="安裝 Yellow Dog Linux - 第 3 步">
+                  <i class="fa fa-angle-left"></i> 安裝 Yellow Dog Linux - 第 3 步
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/linux/installing-fedora-core-4-ppc/" rel="next" title="安裝 Fedora Core 4 PPC">
+                  安裝 Fedora Core 4 PPC <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2005 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cunji.de</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">231k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">9:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
