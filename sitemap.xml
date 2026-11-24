@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jute.im/about/index.html</loc>
+    
+    <lastmod>2026-11-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/apple/zplug/</loc>
     
     <lastmod>2026-11-24</lastmod>
@@ -2012,15 +2021,6 @@
     <loc>https://jute.im/linux/20-days-after-shifting-to-garuda-linux/</loc>
     
     <lastmod>2026-11-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/about/index.html</loc>
-    
-    <lastmod>2026-11-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
