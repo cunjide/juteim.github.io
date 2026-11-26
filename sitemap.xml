@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jute.im/boshiamy/nothingIME-and-boshiamy/</loc>
+    
+    <lastmod>2026-11-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/categories/index.html</loc>
     
     <lastmod>2026-11-26</lastmod>
@@ -390,15 +399,6 @@
   
   <url>
     <loc>https://jute.im/boshiamy/onmybias-ios-version/</loc>
-    
-    <lastmod>2026-11-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/boshiamy/nothingIME-and-boshiamy/</loc>
     
     <lastmod>2026-11-24</lastmod>
     
