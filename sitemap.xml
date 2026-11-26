@@ -2594,15 +2594,6 @@
   </url>
   
   <url>
-    <loc>https://jute.im/linux/linux-files-and-directories/</loc>
-    
-    <lastmod>2025-02-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jute.im/linux/linux-file-system/</loc>
     
     <lastmod>2025-02-01</lastmod>
@@ -2612,7 +2603,7 @@
   </url>
   
   <url>
-    <loc>https://jute.im/linux/linux-vi-editor/</loc>
+    <loc>https://jute.im/linux/linux-files-and-directories/</loc>
     
     <lastmod>2025-02-01</lastmod>
     
@@ -2622,6 +2613,15 @@
   
   <url>
     <loc>https://jute.im/linux/linux-reference/</loc>
+    
+    <lastmod>2025-02-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/linux/linux-vi-editor/</loc>
     
     <lastmod>2025-02-01</lastmod>
     
@@ -2798,7 +2798,28 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/android/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/boshiamy/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/ios/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2819,7 +2840,21 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/</loc>
+    <loc>https://jute.im/tags/apple/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/macos/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/macosx/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2854,42 +2889,21 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/android/</loc>
+    <loc>https://jute.im/tags/ipad/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/tags/ios/</loc>
+    <loc>https://jute.im/tags/ipadair5/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/tags/apple/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/macos/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/macosx/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/windows11/</loc>
+    <loc>https://jute.im/tags/archcraft/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2917,21 +2931,7 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/ipad/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/ipadair5/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/archcraft/</loc>
+    <loc>https://jute.im/tags/windows11/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2939,6 +2939,13 @@
   
   <url>
     <loc>https://jute.im/tags/archlabs/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/fcitx5-table-extra/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2959,28 +2966,7 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/fcitx5-table-extra/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/anime/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/cartoon/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/youtube/</loc>
+    <loc>https://jute.im/tags/itunes/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3022,6 +3008,27 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/anime/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/cartoon/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/youtube/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/mac/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3029,35 +3036,7 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/itunes/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jute.im/tags/fcitx5/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/havefun/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/mobliedevice/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/screenprotector/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3092,6 +3071,27 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/havefun/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/mobliedevice/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/screenprotector/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/debian/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3099,14 +3099,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/domains/</loc>
+    <loc>https://jute.im/tags/microsoftupdatecatalog/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/tags/web/</loc>
+    <loc>https://jute.im/tags/windowsupdate/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3148,21 +3148,21 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/microsoftupdatecatalog/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/windowsupdate/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jute.im/tags/bios/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/domains/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/web/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3190,6 +3190,34 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/fusiondrive/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/highsierra/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/imac/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/mojave/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/applewatch/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3205,13 +3233,6 @@
   
   <url>
     <loc>https://jute.im/tags/fitnesstracker/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/highsierra/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3246,6 +3267,13 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/freebsd/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/apfs/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3268,34 +3296,6 @@
   
   <url>
     <loc>https://jute.im/tags/diskpart/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/fusiondrive/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/mojave/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/imac/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/freebsd/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3477,21 +3477,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/clearlinux/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/usbhdd/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jute.im/tags/appleComputer/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/clearlinux/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3512,6 +3505,13 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/usbhdd/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/grub/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3520,6 +3520,13 @@
   
   <url>
     <loc>https://jute.im/tags/opensuse/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/pop-os/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3540,13 +3547,6 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/pop-os/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jute.im/tags/spotify/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3554,14 +3554,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/vscode/</loc>
+    <loc>https://jute.im/tags/swupd/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/tags/swupd/</loc>
+    <loc>https://jute.im/tags/vscode/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3610,6 +3610,13 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/iphone6splus/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/iphones16e/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3624,7 +3631,7 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/iphone6splus/</loc>
+    <loc>https://jute.im/tags/disneyPlus/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3632,13 +3639,6 @@
   
   <url>
     <loc>https://jute.im/tags/ipados/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/disneyPlus/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3659,14 +3659,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/hamiVideo/</loc>
+    <loc>https://jute.im/tags/fridayVideo/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/tags/fridayVideo/</loc>
+    <loc>https://jute.im/tags/hamiVideo/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3778,27 +3778,6 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/pime/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/powercord/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/powersync/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jute.im/tags/boots/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3820,6 +3799,27 @@
   </url>
   
   <url>
+    <loc>https://jute.im/tags/pime/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/powercord/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/powersync/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jute.im/tags/basilisk/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3834,7 +3834,7 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/risios/</loc>
+    <loc>https://jute.im/tags/ringke/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3862,14 +3862,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/movie/</loc>
+    <loc>https://jute.im/tags/risios/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/tags/slackware/</loc>
+    <loc>https://jute.im/tags/movie/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3904,7 +3904,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/ringke/</loc>
+    <loc>https://jute.im/tags/slackware/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/ibus-chewing/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3953,7 +3960,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/tags/ibus-chewing/</loc>
+    <loc>https://jute.im/tags/bug/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jute.im/tags/microsoftedge/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3968,20 +3982,6 @@
   
   <url>
     <loc>https://jute.im/tags/movies/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/bug/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jute.im/tags/microsoftedge/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4081,14 +4081,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/categories/reviews/</loc>
+    <loc>https://jute.im/categories/apple/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/categories/apple/</loc>
+    <loc>https://jute.im/categories/reviews/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4109,14 +4109,14 @@
   </url>
   
   <url>
-    <loc>https://jute.im/categories/google/</loc>
+    <loc>https://jute.im/categories/windows/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jute.im/categories/windows/</loc>
+    <loc>https://jute.im/categories/google/</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
