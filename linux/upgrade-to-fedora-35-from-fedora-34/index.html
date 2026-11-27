@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-06.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-07.webp">
 <meta property="article:published_time" content="2021-11-04T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T11:45:47.302Z">
+<meta property="article:modified_time" content="2026-11-27T05:35:58.289Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="fedora">
 <meta property="article:tag" content="linux">
@@ -299,15 +299,24 @@
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-01.webp"> 昨天，我在 Parallels Desktop 15 的虛擬環境下去，安裝一個全新的 Fedora 35 Workstation。</p>
 <p>接著，我把之前安裝在外接硬碟的 Fedora 34 拿出來更新，並且以我自己的使用習慣快速感受一下升級後的不同，以下是我的升級流程。</p>
 <h3 id="升級流程"><a href="#升級流程" class="headerlink" title="升級流程"></a>升級流程</h3><ol>
-<li>我的 Fedora 34 安裝完之後，在今天升級到 Fedora 35 之前，完全都沒有更新過。sudo dnf upgrade –refresh 這道指令下完後，CLI(Terminal) 顯示這些要更新的套件，總共 1.4G，光在這裡，就花費一點時間 。 <img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-01.webp"></li>
-<li>走完 sudo dnf system-upgrade download –releasever&#x3D;35 這道指令時，已經快過 2 個小時。 <img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-02.webp"><br><img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-03.webp"> <img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-04.webp">5. 更新系統相較於全新安裝，對我來說，有個好處是有些更新就相對顯而易見。 <img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-05.webp"></li>
-<li>升級完不久，系統馬上再跳出更新套件的訊息。 <img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-06.webp"></li>
-<li>更新系統，也可以透過 GUI 達成。這個經驗，姑且就留給下次吧！ <img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-07.webp"></li>
+<li><p>我的 Fedora 34 安裝完之後，在今天升級到 Fedora 35 之前，完全都沒有更新過。sudo dnf upgrade –refresh 這道指令下完後，CLI(Terminal) 顯示這些要更新的套件，總共 1.4G，光在這裡，就花費一點時間 。<img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-01.webp"></p>
+</li>
+<li><p>走完 sudo dnf system-upgrade download –releasever&#x3D;35 這道指令時，已經快過 2 個小時。<img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-02.webp"><img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-03.webp"><img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-04.webp"></p>
+</li>
+<li><p>更新系統相較於全新安裝，對我來說，有個好處是有些更新就相對顯而易見。<img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-05.webp"></p>
+</li>
+<li><p>升級完不久，系統馬上再跳出更新套件的訊息。<img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-06.webp"></p>
+</li>
+<li><p>更新系統，也可以透過 GUI 達成。這個經驗，姑且就留給下次吧！<img src="/pics/linux/2021-11-04-upgrade-to-fedora-35-from-fedora-34/upgrade-to-fedora-35-from-fedora-34-07.webp"></p>
+</li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>其實…，我對系統的要求沒有很多，已經有好幾年，無論是那一個系統的升級，我認為要重新適應的地方，通常不多。</li>
-<li>安裝硬體：Mac mini(2014 年末)、1TB 外接硬碟。</li>
-<li>更新系統參考資料網址：<a target="_blank" rel="noopener" href="https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/">DNF System Upgrade :: Fedora Docs</a></li>
+<li><p>其實…，我對系統的要求沒有很多，已經有好幾年，無論是那一個系統的升級，我認為要重新適應的地方，通常不多。</p>
+</li>
+<li><p>安裝硬體：Mac mini(2014 年末)、1TB 外接硬碟。</p>
+</li>
+<li><p>更新系統參考資料網址：<a target="_blank" rel="noopener" href="https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/">DNF System Upgrade :: Fedora Docs</a></p>
+</li>
 </ol>
 
     </div>

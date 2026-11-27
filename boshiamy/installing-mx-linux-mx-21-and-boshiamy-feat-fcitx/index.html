@@ -50,7 +50,7 @@
 <meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-21.webp">
 <meta property="og:image" content="https://jute.im/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-22.webp">
 <meta property="article:published_time" content="2022-01-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-27T03:46:52.029Z">
+<meta property="article:modified_time" content="2026-11-27T05:35:57.522Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="boshiamy">
 <meta property="article:tag" content="debian">
@@ -315,55 +315,50 @@
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-01.webp"></p>
 <p>在 DistroWatch 可以看「網頁參觀排名」，目前排名第一的是 MX Linux，從 2014 年 3 月 24 日的初始版本至今約莫 7 個年頭，以現今的發行版 (Distro) 百家齊放的世代而言，有這樣的爬升速度肯定有它的原因。</p>
 <p>我尤其對 AHS (Advanced Hardware Support) 版感興趣，索性就拿一部實體機器與 VirtualBox 來安裝體驗一下。</p>
-<h3 id="安裝-MX-Linux-MX-21"><a href="#安裝-MX-Linux-MX-21" class="headerlink" title="安裝 MX Linux MX-21"></a>安裝 MX Linux MX-21</h3><p>下圖是在 VirtualBox 安裝過程的其中一張截圖（很抱歉，原本的完整相簿已失效）。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-02.webp"></p>
+<h3 id="安裝-MX-Linux-MX-21"><a href="#安裝-MX-Linux-MX-21" class="headerlink" title="安裝 MX Linux MX-21"></a>安裝 MX Linux MX-21</h3><p>下圖是在 VirtualBox 安裝過程的其中一張截圖（很抱歉，原本的完整相簿已失效）。<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-02.webp"></p>
 <h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><p>同樣是在 Linux 上搞定嘸蝦米，MX Linux 應該是我從去年至今，所有接觸到的 Linux 中，相對複雜的一支 Distro，所以，我的因應及處理過程也比較謹慎。(更新日期：2023 年 2 月 2 日)</p>
 <p>步驟的部分，可以分成 2 大區塊。</p>
 <ol>
-<li>先設定好 XMODIFIERS</li>
-<li>安裝與設定 fcitx 與嘸蝦米：大致可以分為 2 種，這 2 種也可以混搭使用，其實，文章更新前，我所走過的方法就是 2 者混搭服用的。<br>(1) CLI 介面安裝設定法<br>(2) GUI 圖型介面安裝設定法</li>
+<li><p>先設定好 XMODIFIERS</p>
+</li>
+<li><p>安裝與設定 fcitx 與嘸蝦米：大致可以分為 2 種，這 2 種也可以混搭使用，其實，文章更新前，我所走過的方法就是 2 者混搭服用的。<br>(1) CLI 介面安裝設定法<br>(2) GUI 圖型介面安裝設定法</p>
+</li>
 </ol>
 <h4 id="1-先設定好-XMODIFIERS"><a href="#1-先設定好-XMODIFIERS" class="headerlink" title="1.先設定好 XMODIFIERS"></a>1.先設定好 XMODIFIERS</h4><ol>
-<li><p>下 <code>sudo vim /etc/enviroment</code> 這道指令。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-03.webp"></p>
+<li><p>下 <code>sudo vim /etc/enviroment</code> 這道指令。(下圖)<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-03.webp"></p>
 </li>
 <li><p>進入 vim 編輯器的畫面後，將下列內容輸入進去後存檔離開。(下圖)</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
 <p> <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-04.webp"></p>
-<p> 「複製貼上法」一直都是王道。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-05.webp"></p>
+<p> 「複製貼上法」一直都是王道。<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-05.webp"></p>
 </li>
 </ol>
 <h4 id="2-安裝與設定-fcitx-與嘸蝦米-1-CLI-介面安裝設定法"><a href="#2-安裝與設定-fcitx-與嘸蝦米-1-CLI-介面安裝設定法" class="headerlink" title="2.安裝與設定 fcitx 與嘸蝦米 - (1) CLI 介面安裝設定法"></a>2.安裝與設定 fcitx 與嘸蝦米 - (1) CLI 介面安裝設定法</h4><ol>
-<li><p>先下一道指令：<code>sudo apt search fcitx-table-boshiamy</code>，沒找到套件。<code>sudo apt update</code> 後，再搜尋一次，可以順利找出來。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-06.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-07.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-08.webp"></p>
+<li><p>先下一道指令：<code>sudo apt search fcitx-table-boshiamy</code>，沒找到套件。<code>sudo apt update</code> 後，再搜尋一次，可以順利找出來。(下圖)<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-06.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-07.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-08.webp"></p>
 </li>
-<li><p>下一道指令：<code>sudo apt install fcitx-table-boshiamy</code>，發現主程式並沒有經由相依套件一起安裝進來，而是在建議套件裡面。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-09.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-10.webp"></p>
+<li><p>下一道指令：<code>sudo apt install fcitx-table-boshiamy</code>，發現主程式並沒有經由相依套件一起安裝進來，而是在建議套件裡面。(下圖)<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-09.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-10.webp"></p>
 </li>
 <li><p>再下一次指令把主程式也抓進來，再觀察相依套件後，下列是我最後下的指令。</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-tools fcitx-ui* fcitx-config-* fcitx-module* fcitx-frontend-* fcitx-table-boshiamy fcitx-m17n</span><br></pre></td></tr></table></figure>
-<p> <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-11.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-12.webp"></p>
+<p> <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-11.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-12.webp"></p>
 </li>
-<li><p>下 <code>cp /usr/share/applications/fcitx.desktop .config/autostart/</code> 這道指令，接著再下 <code>sudo reboot</code> 讓系統重開機。基本上，CLI 介面的安裝設定法，走到這邊就算告一段落。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-13.webp"></p>
+<li><p>下 <code>cp /usr/share/applications/fcitx.desktop .config/autostart/</code> 這道指令，接著再下 <code>sudo reboot</code> 讓系統重開機。基本上，CLI 介面的安裝設定法，走到這邊就算告一段落。<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-13.webp"></p>
 </li>
 </ol>
 <h4 id="2-安裝與設定-fcitx-與嘸蝦米-2-GUI-圖型介面安裝設定法"><a href="#2-安裝與設定-fcitx-與嘸蝦米-2-GUI-圖型介面安裝設定法" class="headerlink" title="2.安裝與設定 fcitx 與嘸蝦米 - (2) GUI 圖型介面安裝設定法"></a>2.安裝與設定 fcitx 與嘸蝦米 - (2) GUI 圖型介面安裝設定法</h4><ol>
-<li><p>開啟「MX 軟體安裝工具」，並且搜尋關鍵字：<code>fcitx</code>，找到「Chinese_Input_fcitx」 後，勾選並按下右下角的「安裝」。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-14.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-15.webp"></p>
+<li><p>開啟「MX 軟體安裝工具」，並且搜尋關鍵字：<code>fcitx</code>，找到「Chinese_Input_fcitx」 後，勾選並按下右下角的「安裝」。<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-14.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-15.webp"></p>
 </li>
-<li><p>接著，繼續在「MX 軟體安裝工具」作業：從「安定倉庫」頁籤進去，搜尋關鍵字：<code>fcitx-table-boshiamy</code>，同樣勾選後進行安裝。(下圖所示是我還沒有完整打完，就可以找到要安裝的套件） <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-16.webp"></p>
+<li><p>接著，繼續在「MX 軟體安裝工具」作業：從「安定倉庫」頁籤進去，搜尋關鍵字：<code>fcitx-table-boshiamy</code>，同樣勾選後進行安裝。(下圖所示是我還沒有完整打完，就可以找到要安裝的套件）<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-16.webp"></p>
 </li>
-<li><p>點出開始功能表，使用關鍵字「start」，找出「工作階段與啟動」這個設定介面。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-17.webp"></p>
+<li><p>點出開始功能表，使用關鍵字「start」，找出「工作階段與啟動」這個設定介面。(下圖)<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-17.webp"></p>
 </li>
-<li><p>在「應用程式自動啟動」新增 fcitx 指令，名稱與敘述我就隨便命名，萬一搞錯的話，想讓自己好找就好。(下圖) <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-18.webp"></p>
+<li><p>在「應用程式自動啟動」新增 fcitx 指令，名稱與敘述我就隨便命名，萬一搞錯的話，想讓自己好找就好。(下圖)<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-18.webp"></p>
 </li>
 </ol>
 <h4 id="最終確認"><a href="#最終確認" class="headerlink" title="最終確認"></a>最終確認</h4><ol>
-<li><p>無論使用哪一種方法，重新啟動系統後，靜靜地等待左側工作列上的 fcitx 小鍵盤圖示能否順利載入。 <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-19.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-20.webp">    </p>
+<li><p>無論使用哪一種方法，重新啟動系統後，靜靜地等待左側工作列上的 fcitx 小鍵盤圖示能否順利載入。<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-19.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-20.webp">    </p>
 </li>
-<li><p>有出現的話，就賓果，不用客氣，直接點餐，開心吃蝦啦！ <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-21.webp"></p>
-<p>  <img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-22.webp"></p>
+<li><p>有出現的話，就賓果，不用客氣，直接點餐，開心吃蝦啦！<img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-21.webp"><img src="/pics/boshiamy/2022-01-25-installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx-22.webp"></p>
 </li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
@@ -387,9 +382,9 @@
 
     <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
               <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/mxlinux/" rel="tag"># mxlinux</a>
               <a href="/tags/debian/" rel="tag"># debian</a>
           </div>

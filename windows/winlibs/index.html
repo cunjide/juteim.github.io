@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://jute.im/pics/windows/2024-04-01-winlibs/winlibs-04.webp">
 <meta property="og:image" content="https://jute.im/pics/windows/2024-04-01-winlibs/winlibs-05.webp">
 <meta property="article:published_time" content="2024-04-01T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:33.600Z">
+<meta property="article:modified_time" content="2026-11-27T05:05:04.685Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="vscode">
 <meta property="article:tag" content="windows10">
@@ -302,7 +302,6 @@
 <li><p>今天要紀錄的 WinLibs，算是另外一個在 Windows 上設定 Compiler 時，很不錯的選擇。</p>
 </li>
 </ol>
-<hr>
 <h3 id="下載與設定-WinLibs"><a href="#下載與設定-WinLibs" class="headerlink" title="下載與設定 WinLibs"></a>下載與設定 WinLibs</h3><ol>
 <li><p>下載 WinLibs 上的編譯器時，可能會想，是要下載 MSVCRT？還是 UCRT？關於這一點，官網有說明，官網也直接給結論：以 UCRT 為主。</p>
 <blockquote>
@@ -311,13 +310,13 @@
 </li>
 <li><p>無論是選擇 7-Zip 或是 Zip 壓縮檔，解壓的路徑，我自己的習慣是直接丟到系統硬碟的根目錄底下(也就是C:)。</p>
 </li>
-<li><p>接著，要設定 Windows 的 PATH 環境變數。要快速地進入「系統內容」，可以開 Windows 的 Terminal (CMD) 或是按住「Win+R」，執行 <code>systempropertiesadvanced</code>。 <img src="/pics/windows/2024-04-01-winlibs/winlibs-01.webp"></p>
+<li><p>接著，要設定 Windows 的 PATH 環境變數。要快速地進入「系統內容」，可以開 Windows 的 Terminal (CMD) 或是按住「Win+R」，執行 <code>systempropertiesadvanced</code>。<img src="/pics/windows/2024-04-01-winlibs/winlibs-01.webp"></p>
 </li>
-<li><p>點「環境變數」。 <img src="/pics/windows/2024-04-01-winlibs/winlibs-02.webp"></p>
+<li><p>點「環境變數」。<img src="/pics/windows/2024-04-01-winlibs/winlibs-02.webp"></p>
 </li>
-<li><p>從「系統變數」欄位中，找到「Path」，點選後，再點「編輯」。 <img src="/pics/windows/2024-04-01-winlibs/winlibs-03.webp"></p>
+<li><p>從「系統變數」欄位中，找到「Path」，點選後，再點「編輯」。<img src="/pics/windows/2024-04-01-winlibs/winlibs-03.webp"></p>
 </li>
-<li><p>把「C:\mingw64\bin」這個路徑，新增進去吧！ <img src="/pics/windows/2024-04-01-winlibs/winlibs-04.webp"></p>
+<li><p>把「C:\mingw64\bin」這個路徑，新增進去吧！<img src="/pics/windows/2024-04-01-winlibs/winlibs-04.webp"></p>
 </li>
 <li><p>如果有已開啟的 Windows Termial (CMD) 的話，關掉並重新啟動 Terminal，如果沒有，直接啟動一個新的，執行下列命令，確認安裝完成。</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">g++ -v</span><br><span class="line">gcc -v</span><br><span class="line">clang -v</span><br><span class="line">gdb -v</span><br></pre></td></tr></table></figure>
@@ -326,7 +325,6 @@
 <li><p>大致上，就可以拿個 Code 來測試有沒有成功。</p>
 </li>
 </ol>
-<hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li><p>本次紀錄的系統環境是 Windows 10 家用版 22H2，OS 組建 19045.4170，體驗 Windows Feature Experience Pack 1000.19054.1000.0。</p>
 </li>

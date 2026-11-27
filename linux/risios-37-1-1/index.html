@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-13.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-14.webp">
 <meta property="article:published_time" content="2023-01-27T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T11:46:44.504Z">
+<meta property="article:modified_time" content="2026-11-27T05:35:58.117Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="fedora">
 <meta property="article:tag" content="linux">
@@ -304,28 +304,32 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄與分享 risiOS：一支期待可以讓使用者更輕鬆愉快地使用 Fedora 的衍生 Distro。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-01.webp"></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄與分享 risiOS：一支期待可以讓使用者更輕鬆愉快地使用 Fedora 的衍生 Distro。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-01.webp"></p>
 <h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><ol>
-<li><p>安裝與初始設定：一樣用 VirtualBox 搭配 ISO 檔進入系統，而且進入後，稍加注意一下，就會發現 Fedora 的影子還滿明顯的。比方說，Live CD 的桌面左上角，仍然可以看到「Welcome to Fedora」的字樣。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-02.webp"></p>
+<li><p>安裝與初始設定：一樣用 VirtualBox 搭配 ISO 檔進入系統，而且進入後，稍加注意一下，就會發現 Fedora 的影子還滿明顯的。比方說，Live CD 的桌面左上角，仍然可以看到「Welcome to Fedora」的字樣。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-02.webp"></p>
 </li>
-<li><p>在 VirtualBox 上的預設解析度。 (↓)800x600 很顯然是不夠用的，建議至少要調整到 1024x768，圖片所示的是 1280x960。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-03.webp"><br> (↓)安裝完成，進入初始安裝好的系統時，解析度會再跳回 800x600，多數而言，都會想要調整一下。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-04.webp"></p>
+<li><p>在 VirtualBox 上的預設解析度。 (↓)800x600 很顯然是不夠用的，建議至少要調整到 1024x768，圖片所示的是 1280x960。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-03.webp"><br> (↓)安裝完成，進入初始安裝好的系統時，解析度會再跳回 800x600，多數而言，都會想要調整一下。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-04.webp"></p>
 </li>
-<li><p>risiWelcome。 這是 risiOS 的重點之一，這個 App 在 FirstSteps 裡面，幾個項目主要是可以處理 Nvidia 驅動程式、影音解碼與 FlatHub 設定等等，有這些設定，確實提升系統使用上的完整度與便利性。我發現已經有不少 Linux 會這麼做，也許有人也會有跟我一樣的疑問：「怎麼不乾脆在安裝的時候，直接全部納入。」我後來想想，應該也是有 Linux 在安裝之初就收錄並安裝好給使用者，但，Linux 畢竟有比較高的自由度，以我自己而言，越來越喜歡把基本的安裝好，其他的，我想要的時候再加進來的使用習慣，所以，我個人認為保留給使用者自己決定與取捨，仍不失為一個好的系統使用設計方式。<br> QuickSteps 項目裡，則是比較偏向影音娛樂與編輯、遊戲、辦公室(或學校)運用相關的 App 安裝，從這些項目來看，risiOS 目前有比較多的企圖，應該是要讓使用者感受到 Linux 處理這些日常，都是 OK 的。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-05.webp"><br> (↓)原本，我以為走完這個設定就結束，一時之間，也不知道這樣跟 Fedora 有什麼太大的差別。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-06.webp"><br> (↓)隨著 risiWelcome 親臨駕到，這個想法不久就被扭轉。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-06.webp"></p>
+<li><p>risiWelcome。 這是 risiOS 的重點之一，這個 App 在 FirstSteps 裡面，幾個項目主要是可以處理 Nvidia 驅動程式、影音解碼與 FlatHub 設定等等，有這些設定，確實提升系統使用上的完整度與便利性。我發現已經有不少 Linux 會這麼做，也許有人也會有跟我一樣的疑問：「怎麼不乾脆在安裝的時候，直接全部納入。」我後來想想，應該也是有 Linux 在安裝之初就收錄並安裝好給使用者，但，Linux 畢竟有比較高的自由度，以我自己而言，越來越喜歡把基本的安裝好，其他的，我想要的時候再加進來的使用習慣，所以，我個人認為保留給使用者自己決定與取捨，仍不失為一個好的系統使用設計方式。<br> QuickSteps 項目裡，則是比較偏向影音娛樂與編輯、遊戲、辦公室(或學校)運用相關的 App 安裝，從這些項目來看，risiOS 目前有比較多的企圖，應該是要讓使用者感受到 Linux 處理這些日常，都是 OK 的。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-05.webp"><br> (↓)原本，我以為走完這個設定就結束，一時之間，也不知道這樣跟 Fedora 有什麼太大的差別。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-06.webp"><br> (↓)隨著 risiWelcome 親臨駕到，這個想法不久就被扭轉。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-06.webp"></p>
 </li>
-<li><p>risiTweaks：risiOS 另外一個重點，便是這個 App。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-07.webp"><br> (↓)進入後，就會看到總共分為 4 個頁籤，其中一個頁籤：risiScripts，也是 risiOS 的重點，點進去的話，則是一些瀏覽器安裝的 Scripts。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-08.webp"><br> (↓)我選用安裝 Chrome 的 Script，確實可以順利服用，沒有問題。而這次的試用，我並沒有自己試著使用 risiOS 裡面的工作，編寫自己想要的 Script，但，據官方說明，risiOS 已經試著讓自行編寫 Script 這件事變得容易，若真是如此，改天我也會試著在上頭編寫看看。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-08.webp"><br>  <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-09.webp"><br>  <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-10.webp"><br>  <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-11.webp"><br>  <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-12.webp"></p>
+<li><p>risiTweaks：risiOS 另外一個重點，便是這個 App。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-07.webp"><br> (↓)進入後，就會看到總共分為 4 個頁籤，其中一個頁籤：risiScripts，也是 risiOS 的重點，點進去的話，則是一些瀏覽器安裝的 Scripts。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-08.webp"><br> (↓)我選用安裝 Chrome 的 Script，確實可以順利服用，沒有問題。而這次的試用，我並沒有自己試著使用 risiOS 裡面的工作，編寫自己想要的 Script，但，據官方說明，risiOS 已經試著讓自行編寫 Script 這件事變得容易，若真是如此，改天我也會試著在上頭編寫看看。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-08.webp"><img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-09.webp"><img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-10.webp"><img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-11.webp"><img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-12.webp"></p>
 </li>
 </ol>
 <h3 id="中文支援、設定與中文輸入法框架的使用心得"><a href="#中文支援、設定與中文輸入法框架的使用心得" class="headerlink" title="中文支援、設定與中文輸入法框架的使用心得"></a>中文支援、設定與中文輸入法框架的使用心得</h3><ol>
-<li><p>中文支援：有 Fedora 深厚的功力在，基本上中文支援在 Linux 裡面，應該說是前段班並不為過。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-13.webp"></p>
+<li><p>中文支援：有 Fedora 深厚的功力在，基本上中文支援在 Linux 裡面，應該說是前段班並不為過。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-13.webp"></p>
 </li>
-<li><p>中文輸入法框架：我沒有特別去安裝或做設定，只是下一個指令找找看 fcitx5-table-extra 這支套件。我相信，原則上，應該是可以直接參考我寫過的 Fedora 相關貼文。 <img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-14.webp"></p>
+<li><p>中文輸入法框架：我沒有特別去安裝或做設定，只是下一個指令找找看 fcitx5-table-extra 這支套件。我相信，原則上，應該是可以直接參考我寫過的 Fedora 相關貼文。<img src="/pics/linux/2023-01-27-risios-37-1-1/risios-37-1-1-14.webp"></p>
 </li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 risiOS-Live-37-1-1-20230105.iso。</li>
-<li>相較於 Arch Linux、Debian 與 Ubuntu，Fedora 的衍生 Distro 就顯得不是那麼百花齊放。</li>
-<li>risiOS 在官網提到，系統在 Virtual Machine 上的執行效率並不是很好，然而，我這次在 VirtualBox 上面執行，整體而言，並不會覺得效能特別差。當然，我也得說，因為我在使用比較偏試用性質，也沒有特地再去拿效能、壓力測試軟體去把系統與硬體搭配的效能整個壓出來瞧瞧，所以，嚴格而言，頂多就只能當成是文書機的使用心得。</li>
-<li><a target="_blank" rel="noopener" href="https://risi.io/">RisiOS</a></li>
+<li><p>本次安裝使用的 ISO 檔版本是 risiOS-Live-37-1-1-20230105.iso。</p>
+</li>
+<li><p>相較於 Arch Linux、Debian 與 Ubuntu，Fedora 的衍生 Distro 就顯得不是那麼百花齊放。</p>
+</li>
+<li><p>risiOS 在官網提到，系統在 Virtual Machine 上的執行效率並不是很好，然而，我這次在 VirtualBox 上面執行，整體而言，並不會覺得效能特別差。當然，我也得說，因為我在使用比較偏試用性質，也沒有特地再去拿效能、壓力測試軟體去把系統與硬體搭配的效能整個壓出來瞧瞧，所以，嚴格而言，頂多就只能當成是文書機的使用心得。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://risi.io/">RisiOS</a></p>
+</li>
 </ol>
 
     </div>

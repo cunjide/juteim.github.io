@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-02.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-03.webp">
 <meta property="article:published_time" content="2021-11-01T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T11:45:46.932Z">
+<meta property="article:modified_time" content="2026-11-27T05:31:16.920Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="apple">
 <meta property="article:tag" content="fcitx-table-boshiamy">
@@ -297,27 +297,35 @@
     
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>macOS 又重新回到只支援自家處理器的路，無法使用 Bootcamp 的狀況下，我相信會有不少使用者會透過虛擬主機軟體去滿足自己使用上的需求，我使用的 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 最後一個版本是第 15 版，但，我並沒有在上面安裝過 Linux。</p>
 <p>這幾天姑且一試，發現 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 會挑 Distro，在 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 介面上有列出來的，比較可以正常讀到 ISO 檔，之所以會說比較可以，原因是 Manjaro Linux 的 ISO 檔 (版本為 manjaro-xfce-21.1.5-211008-linux513.iso) 讀到一半就卡住，我試了 2 次後，就決定暫時先放著，如果要再試，我可能會用比較舊的版本。</p>
-<p>就網路上的分享，Ubuntu 的契合度比較好，但，我今天想安裝有點一樣又有點不一樣的 Ubuntu 衍生版本：<a target="_blank" rel="noopener" href="https://linuxmint.com/">Linux Mint</a>。 <img src="/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-01.webp"></p>
+<p>就網路上的分享，Ubuntu 的契合度比較好，但，我今天想安裝有點一樣又有點不一樣的 Ubuntu 衍生版本：<a target="_blank" rel="noopener" href="https://linuxmint.com/">Linux Mint</a>。<img src="/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-01.webp"></p>
 <h3 id="快速回顧"><a href="#快速回顧" class="headerlink" title="快速回顧"></a>快速回顧</h3><ol>
-<li>圖形介面的安裝，我並沒有截安裝過程的畫面，印象中，幾乎都是在下一步的前提下完成。</li>
-<li>一進入系統，我就想要試試 Parallels Toolbox，安裝上也滿順利的。<img src="/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-02.webp"></li>
+<li><p>圖形介面的安裝，我並沒有截安裝過程的畫面，印象中，幾乎都是在下一步的前提下完成。</p>
+</li>
+<li><p>一進入系統，我就想要試試 Parallels Toolbox，安裝上也滿順利的。<img src="/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-02.webp"></p>
+</li>
 </ol>
 <h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><ol>
-<li>Linux 內建 2 個輸入法：XIM 與 fcitx，我觀察了一下，預設是 fcitx(4)。</li>
-<li>只要在 Terminal 下一道指令，把嘸蝦米表格檔安裝進來，再重開機就可以使用。</li>
+<li><p>Linux 內建 2 個輸入法：XIM 與 fcitx，我觀察了一下，預設是 fcitx(4)。</p>
+</li>
+<li><p>只要在 Terminal 下一道指令，把嘸蝦米表格檔安裝進來，再重開機就可以使用。</p>
+</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx-table-boshiamy</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
+<ol start="3">
 <li>預設的輸入介面名為 Ubuntu，我個人認為，有點花俏。<br><img src="/pics/linux/2021-11-01-linux-mint-on-parallels-desktop-15/linux-mint-on-parallels-desktop-15-03.webp"></li>
 </ol>
 <h3 id="10-分鐘使用心得"><a href="#10-分鐘使用心得" class="headerlink" title="10 分鐘使用心得"></a>10 分鐘使用心得</h3><ol>
-<li>順：我是在 Mac mini(2014 年末版) 安裝，只有 8G 的記憶體，這樣的硬體，用 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 扛 Windows 10 有點吃力，但是跑 Linux Mint 卻遊刃有餘。</li>
-<li>有點卡的地方：<a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 裡的系統，無法使用快速鍵，這個是我在切換輸入法時發現的，我最近常用的 VirtualBox 預設就會支援這個功能，所以換到 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a>，切換輸入法，我必須用滑鼠點，就變得有那麼點不順手。</li>
+<li><p>順：我是在 Mac mini(2014 年末版) 安裝，只有 8G 的記憶體，這樣的硬體，用 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 扛 Windows 10 有點吃力，但是跑 Linux Mint 卻遊刃有餘。</p>
+</li>
+<li><p>有點卡的地方：<a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a> 裡的系統，無法使用快速鍵，這個是我在切換輸入法時發現的，我最近常用的 VirtualBox 預設就會支援這個功能，所以換到 <a target="_blank" rel="noopener" href="https://www.parallels.com/">Parallels Desktop</a>，切換輸入法，我必須用滑鼠點，就變得有那麼點不順手。</p>
+</li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 linuxmint-20.2-cinnamon-64bit.iso。</li>
-<li>最近，在網路上讀到一篇文章：<a target="_blank" rel="noopener" href="https://www.kocpc.com.tw/archives/410172">M1 Max 實測 25 款 3A 遊戲大作的效能表現，這結果很可以 - 電腦王阿達</a>，文中提到的那些遊戲，如果以現在的 PC 硬體而言，大概 2 萬 5 千元的桌上型電腦就可以達成，並且面對清單裡面的遊戲，PC 效能幾乎是綽綽有餘，換在 Mac 上，搭載 M1 Max 的 Apple Macbook Pro(2021) 要價 104,900 元，再加上一套 Parallels Desktop，同樣的價格，可以買到一部也是怪獸級的 PC 筆電。說真的，如果有強烈的蘋果專屬軟體需求者(剪輯、Coding 等)，就比較會覺得加上一套 Parallels Desktop，多少能夠玩一些遊戲，是也還不錯。但，如果有使用 Unreal Engine 開發遊戲需求的，應該就會做出不同的選擇吧！</li>
+<li><p>本次安裝使用的 ISO 檔版本是 linuxmint-20.2-cinnamon-64bit.iso。</p>
+</li>
+<li><p>最近，在網路上讀到一篇文章：<a target="_blank" rel="noopener" href="https://www.kocpc.com.tw/archives/410172">M1 Max 實測 25 款 3A 遊戲大作的效能表現，這結果很可以 - 電腦王阿達</a>，文中提到的那些遊戲，如果以現在的 PC 硬體而言，大概 2 萬 5 千元的桌上型電腦就可以達成，並且面對清單裡面的遊戲，PC 效能幾乎是綽綽有餘，換在 Mac 上，搭載 M1 Max 的 Apple Macbook Pro(2021) 要價 104,900 元，再加上一套 Parallels Desktop，同樣的價格，可以買到一部也是怪獸級的 PC 筆電。說真的，如果有強烈的蘋果專屬軟體需求者(剪輯、Coding 等)，就比較會覺得加上一套 Parallels Desktop，多少能夠玩一些遊戲，是也還不錯。但，如果有使用 Unreal Engine 開發遊戲需求的，應該就會做出不同的選擇吧！</p>
+</li>
 </ol>
 
     </div>
@@ -328,10 +336,10 @@
 
     <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/apple/" rel="tag"># apple</a>
               <a href="/tags/windows/" rel="tag"># windows</a>
               <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
               <a href="/tags/fcitx-table-boshiamy/" rel="tag"># fcitx-table-boshiamy</a>
               <a href="/tags/linuxmint/" rel="tag"># linuxmint</a>

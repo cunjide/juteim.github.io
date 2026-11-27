@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://jute.im/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-08.webp">
 <meta property="og:image" content="https://jute.im/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-09.webp">
 <meta property="article:published_time" content="2021-09-02T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.910Z">
+<meta property="article:modified_time" content="2026-11-27T05:31:16.811Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="vscode">
@@ -299,22 +299,29 @@
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Visual Studio Code (又稱 VSCode)，在三大平台都能夠使用，今天這一則貼文是紀錄在 Lubuntu 上安裝 VSCode，設定一個可以進行 C++ 程式設計 IDE 的過程。</p>
 <p>我把貼文分成 5 個部分：</p>
 <ol>
-<li>安裝 GCC</li>
-<li>安裝 VSCode 主程式</li>
-<li>設定程式設計專案路徑</li>
-<li>安裝 Visual Studio Code 語言套件與 C++ 相關套件</li>
-<li>測試 VSCode</li>
+<li><p>安裝 GCC</p>
+</li>
+<li><p>安裝 VSCode 主程式</p>
+</li>
+<li><p>設定程式設計專案路徑</p>
+</li>
+<li><p>安裝 Visual Studio Code 語言套件與 C++ 相關套件</p>
+</li>
+<li><p>測試 VSCode</p>
+</li>
 </ol>
 <h3 id="安裝-GCC"><a href="#安裝-GCC" class="headerlink" title="安裝 GCC"></a>安裝 GCC</h3><ol>
-<li>我的 Lubuntu 在安裝時是選擇 Normal Installation，並沒有把 GCC 安裝進來。 <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-01.webp"></li>
-<li>一道指令就搞定：<code>sudo apt install gcc gpp g++ gdb</code>。</li>
+<li><p>我的 Lubuntu 在安裝時是選擇 Normal Installation，並沒有把 GCC 安裝進來。<img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-01.webp"></p>
+</li>
+<li><p>一道指令就搞定：<code>sudo apt install gcc gpp g++ gdb</code>。</p>
+</li>
 </ol>
 <h3 id="安裝-VSCode-主程式"><a href="#安裝-VSCode-主程式" class="headerlink" title="安裝 VSCode 主程式"></a>安裝 VSCode 主程式</h3><ol>
 <li><p>官網的說明，其實非常清楚，基本上有 2 種方式，都透過 APT 處理。 (1) 下載 .deb 檔並安裝。 (2) 安裝 Repository 與 GPG key，再進行 VSCode 主程式安裝。</p>
 </li>
 <li><p>我選後者，安裝的指令，也完全參照官網。</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg</span><br><span class="line">sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/</span><br><span class="line">sudo sh -c &#x27;echo &quot;deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#x27;</span><br><span class="line">rm -f packages.microsoft.gpg</span><br><span class="line">sudo apt install apt-transport-https</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install code</span><br></pre></td></tr></table></figure>
-<p> <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-02.webp"> <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-03.webp"> <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-04.webp"></p>
+<p> <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-02.webp"><img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-03.webp"><img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-04.webp"></p>
 </li>
 </ol>
 <h3 id="設定程式設計專案路徑"><a href="#設定程式設計專案路徑" class="headerlink" title="設定程式設計專案路徑"></a>設定程式設計專案路徑</h3><ol>
@@ -326,15 +333,22 @@
 </li>
 </ol>
 <h3 id="安裝-Visual-Studio-Code-語言套件與-C-相關套件"><a href="#安裝-Visual-Studio-Code-語言套件與-C-相關套件" class="headerlink" title="安裝 Visual Studio Code 語言套件與 C++ 相關套件"></a>安裝 Visual Studio Code 語言套件與 C++ 相關套件</h3><ol>
-<li>下完 <code>code .</code> 這個指令後，就會跳出 VSCode 主程式，勾選「Trust the …」，點下「Yes, I trust…」那個按鈕。</li>
-<li>一進入程式，程式的右下角就會出現「安裝語言套件…」，而且會對應到使用者的系統語言設定，可以不安裝，但如果對中文比較熟悉的人，倒是可以安裝並重新啟動 VSCode。 <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-06.webp"></li>
-<li>找從程式介面左側，從上數下來的第 5 個圖示，在搜尋框打「C++」，把 C&#x2F;C++ for Visual Studio Code 的套件找出來安裝。 <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-07.webp"></li>
+<li><p>下完 <code>code .</code> 這個指令後，就會跳出 VSCode 主程式，勾選「Trust the …」，點下「Yes, I trust…」那個按鈕。</p>
+</li>
+<li><p>一進入程式，程式的右下角就會出現「安裝語言套件…」，而且會對應到使用者的系統語言設定，可以不安裝，但如果對中文比較熟悉的人，倒是可以安裝並重新啟動 VSCode。<img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-06.webp"></p>
+</li>
+<li><p>找從程式介面左側，從上數下來的第 5 個圖示，在搜尋框打「C++」，把 C&#x2F;C++ for Visual Studio Code 的套件找出來安裝。<img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-07.webp"></p>
+</li>
 </ol>
 <h3 id="測試-VSCode"><a href="#測試-VSCode" class="headerlink" title="測試 VSCode"></a>測試 VSCode</h3><ol>
-<li>新增檔案，幾個方式可以達成： (1)Ctrl+N。 (2)先在程式介面左邊「檔案總管」，找到一個文件上面有加號的圖示。 (3)「檔案」→「新增檔案」。</li>
-<li>寫一段程式碼測試看看，這裡我是拿官方給的程式碼，複製貼上，再按「Ctrl+S」，接著再按「F5」，程式會請我們選取環境，我選「C++ (GDB&#x2F;LLDB)」。</li>
-<li>再選「g++ -建置…」。 <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-08.webp"></li>
-<li>走到這裡應該就是沒有問題。 <img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-09.webp"></li>
+<li><p>新增檔案，幾個方式可以達成： (1)Ctrl+N。 (2)先在程式介面左邊「檔案總管」，找到一個文件上面有加號的圖示。 (3)「檔案」→「新增檔案」。</p>
+</li>
+<li><p>寫一段程式碼測試看看，這裡我是拿官方給的程式碼，複製貼上，再按「Ctrl+S」，接著再按「F5」，程式會請我們選取環境，我選「C++ (GDB&#x2F;LLDB)」。</p>
+</li>
+<li><p>再選「g++ -建置…」。<img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-08.webp"></p>
+</li>
+<li><p>走到這裡應該就是沒有問題。<img src="/pics/linux/2021-09-02-installing-visual-studio-code-on-lubuntu-18-04-lts/installing-visual-studio-code-on-lubuntu-18-04-lts-09.webp"></p>
+</li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>Have fun. Enjoy coding, again!</p>
 

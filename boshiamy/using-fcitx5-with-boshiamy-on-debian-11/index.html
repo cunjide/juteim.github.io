@@ -48,7 +48,7 @@
 <meta property="og:image" content="https://jute.im/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-19.webp">
 <meta property="og:image" content="https://jute.im/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-20.webp">
 <meta property="article:published_time" content="2021-08-18T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T11:46:44.646Z">
+<meta property="article:modified_time" content="2026-11-27T05:05:04.639Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="boshiamy">
 <meta property="article:tag" content="debian">
@@ -311,10 +311,10 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fcitx5 是 Debian 11 預先安裝好的中文輸入法，目前，無法在 Debian 11 上直接透過 <code>apt install fcitx5-table-extra fcitx5-table-other</code> 把其他的中文輸入法安裝進來。 <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-01.webp"></p>
-<p>我在 pkgs.org 找到 Arch Linux 上已經編譯好的表格與圖示檔，詳可見：<a target="_blank" rel="noopener" href="https://pkgs.org/download/fcitx5-table-extra" title="Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)">Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)</a>，觀察頁面說明的 Files 部分，判定可以直接取回服用。 <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-02.webp"></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fcitx5 是 Debian 11 預先安裝好的中文輸入法，目前，無法在 Debian 11 上直接透過 <code>apt install fcitx5-table-extra fcitx5-table-other</code> 把其他的中文輸入法安裝進來。<img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-01.webp"></p>
+<p>我在 pkgs.org 找到 Arch Linux 上已經編譯好的表格與圖示檔，詳可見：<a target="_blank" rel="noopener" href="https://pkgs.org/download/fcitx5-table-extra" title="Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)">Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)</a>，觀察頁面說明的 Files 部分，判定可以直接取回服用。<img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-02.webp"></p>
 <h3 id="服用的紀錄步驟"><a href="#服用的紀錄步驟" class="headerlink" title="服用的紀錄步驟"></a>服用的紀錄步驟</h3><ol>
-<li><p>儘管「Fcitx5 是 Debian 11 預先安裝好的中文輸入法」，我們還是先確認一下系統上的輸入法設定。這個部分，可以下一道指令 <code>im-config</code> 處理。習慣用 GUI 做設定的伙伴，也可以這麼走：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「輸入法」。 <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-03.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-04.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-05.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-06.webp"></p>
+<li><p>儘管「Fcitx5 是 Debian 11 預先安裝好的中文輸入法」，我們還是先確認一下系統上的輸入法設定。這個部分，可以下一道指令 <code>im-config</code> 處理。習慣用 GUI 做設定的伙伴，也可以這麼走：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「輸入法」。<img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-03.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-04.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-05.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-06.webp"></p>
 </li>
 <li><p>或是直接下一道指令，將設定改成我們要的 Fcitx5。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">im-config -n fcitx5</span><br></pre></td></tr></table></figure>
@@ -322,15 +322,15 @@
 </li>
 <li><p>下載 fcitx5-table-extra 並放到正確的位置。</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line">wget https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//小提醒：這個下載的連結網址可能隨版本更新及任何原因而改變，更新本文時，</span><br><span class="line">//下載位置已隨著版本更新而轉變成 https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//因此，建議下指令前，先到 pkgs.org 搜尋與確認下載連結的網址。</span><br><span class="line">//更新日期：2023 年 9 月 17 日。</span><br><span class="line"></span><br><span class="line">tar xvf fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">cp -r usr/share /usr/</span><br></pre></td></tr></table></figure>
-<p> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-08.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-09.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-10.webp"></p>
+<p> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-08.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-09.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-10.webp"></p>
 </li>
-<li><p>在 GNOME 桌面環境下的 Debian 11 使用的是 <code>wget</code> 這個指令，我另外在 debian-live-11.0.0-amd64-xfce.iso 安裝過(XFCE 桌面環境)，使用的下載指令則是 <code>curl -O</code>，如果習慣 <code>wget</code> 的話，我的經驗是要先用 <code>apt</code> 把 <code>wget</code> 安裝進來。 <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-11.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-12.webp"></p>
+<li><p>在 GNOME 桌面環境下的 Debian 11 使用的是 <code>wget</code> 這個指令，我另外在 debian-live-11.0.0-amd64-xfce.iso 安裝過(XFCE 桌面環境)，使用的下載指令則是 <code>curl -O</code>，如果習慣 <code>wget</code> 的話，我的經驗是要先用 <code>apt</code> 把 <code>wget</code> 安裝進來。<img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-11.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-12.webp"></p>
 </li>
 <li><p>啟動 Fcitx5：透過指令 fcitx5 或是從「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5」去啟動，都可以。</p>
 </li>
-<li><p>加入嘸蝦米輸入法：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5 設定」，把嘸蝦米輸入法加進來。 <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-13.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-14.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-15.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-16.webp"></p>
+<li><p>加入嘸蝦米輸入法：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5 設定」，把嘸蝦米輸入法加進來。<img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-13.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-14.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-15.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-16.webp"></p>
 </li>
-<li><p>走到這邊，原則上就能正常服用。<br>↘GNOME 桌面環境。<br><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-17.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-18.webp"> <img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-19.webp"><br>↘XFCE 桌面環境。<br><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-20.webp"></p>
+<li><p>走到這邊，原則上就能正常服用。<br>↘GNOME 桌面環境。<br><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-17.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-18.webp"><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-19.webp"><br>↘XFCE 桌面環境。<br><img src="/pics/boshiamy/2021-08-18-using-fcitx5-with-boshiamy-on-debian-11/using-fcitx5-with-boshiamy-on-debian-11-20.webp"></p>
 </li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
@@ -350,9 +350,9 @@
 
     <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
               <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
               <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
               <a href="/tags/debian/" rel="tag"># debian</a>
@@ -362,8 +362,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/boshiamy/installing-elementary-os-6-0-and-boshiamy/" rel="prev" title="安裝 elementary OS 6.0 與嘸蝦米">
-                  <i class="fa fa-angle-left"></i> 安裝 elementary OS 6.0 與嘸蝦米
+                <a href="/boshiamy/installing-debian-11-and-boshiamy/" rel="prev" title="安裝 Debian 11 與嘸蝦米">
+                  <i class="fa fa-angle-left"></i> 安裝 Debian 11 與嘸蝦米
                 </a>
             </div>
             <div class="post-nav-item">

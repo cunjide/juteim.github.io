@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://jute.im/pics/windows/2022-02-26-enable-ahci-on-windows-10-via-cmd/enable-ahci-on-windows-10-via-cmd-02.webp">
 <meta property="og:image" content="https://jute.im/pics/windows/2022-02-26-enable-ahci-on-windows-10-via-cmd/enable-ahci-on-windows-10-via-cmd-03.webp">
 <meta property="article:published_time" content="2022-02-26T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T11:46:43.882Z">
+<meta property="article:modified_time" content="2026-11-27T05:31:16.182Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="bios">
 <meta property="article:tag" content="linux">
@@ -297,11 +297,11 @@
 <h3 id="啟用-AHCI"><a href="#啟用-AHCI" class="headerlink" title="啟用 AHCI"></a>啟用 AHCI</h3><p>數算一下，在 Windows 10 啟用 AHCI，我知道的方法有 3 種，分別是透過【「裝置管理員」安裝】、【「Regedit 編輯器」修改】以及我個人比較偏好的【「CMD 指令 + 安全模式」自動安裝】。</p>
 <p>【「CMD 指令 + 安全模式」自動安裝】的流程如下：</p>
 <ol>
-<li><p>【以系統管理員身份執行】CMD。 <img src="/pics/windows/2022-02-26-enable-ahci-on-windows-10-via-cmd/enable-ahci-on-windows-10-via-cmd-02.webp"></p>
+<li><p>【以系統管理員身份執行】CMD。<img src="/pics/windows/2022-02-26-enable-ahci-on-windows-10-via-cmd/enable-ahci-on-windows-10-via-cmd-02.webp"></p>
 </li>
 <li><p>將 <code>bcdedit /set {current} safeboot minimal</code> 這串指令打進去(記得 Enter)。</p>
 </li>
-<li><p>重開機，進入 BIOS 設定，找到並啟用 AHCI 設定。各家、各廠牌或各版本等等主機板的設定位置，可能會不太一樣，以今天我設定的機器而言，是在 Advanced\SATA Configuration 這個地方。 <img src="/pics/windows/2022-02-26-enable-ahci-on-windows-10-via-cmd/enable-ahci-on-windows-10-via-cmd-03.webp"></p>
+<li><p>重開機，進入 BIOS 設定，找到並啟用 AHCI 設定。各家、各廠牌或各版本等等主機板的設定位置，可能會不太一樣，以今天我設定的機器而言，是在 Advanced\SATA Configuration 這個地方。<img src="/pics/windows/2022-02-26-enable-ahci-on-windows-10-via-cmd/enable-ahci-on-windows-10-via-cmd-03.webp"></p>
 </li>
 <li><p>跳出 BIOS 設定後，原則上會進入「安全模式」，在「安全模式」下，將 <code>bcdedit /deletevalue {current} safeboot</code> 這串指令打進去(一樣，要記得 Enter)。</p>
 </li>
@@ -319,8 +319,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/windows10/" rel="tag"># windows10</a>
               <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/windows10/" rel="tag"># windows10</a>
               <a href="/tags/bios/" rel="tag"># bios</a>
           </div>
 

@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言Ubuntu，目前在 DistroWatch 上的「網頁參觀排名」是第 7 名，這個排名跟我前次貼出 [版本更新] 快速回顧 Ubuntu 22.04 LTS 的文章時，排名一致而沒有變動。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-10-30T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-23T14:10:00.939Z">
+<meta property="article:modified_time" content="2026-11-27T05:31:17.274Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="boshiamy">
 <meta property="article:tag" content="linux">
@@ -290,25 +290,32 @@
     
     
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Ubuntu，目前在 DistroWatch 上的「網頁參觀排名」是第 7 名，這個排名跟我前次貼出 <a href="/linux/quickrecap-of-Ubuntu-22-04-lts/">[版本更新] 快速回顧 Ubuntu 22.04 LTS</a> 的文章時，排名一致而沒有變動。</p>
-<hr>
 <h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><p>我試著從 <a target="_blank" rel="noopener" href="https://ubuntu.com/blog/canonical-releases-Ubuntu-22-10-kinetic-kudu">Canonical releases Ubuntu 22.10 Kinetic Kudu</a> 這一篇去看，這個版本在 Desktop 部分的更新，再逐一去對照我自己的使用心得或想法(如下)。</p>
 <ol>
-<li>New tools to optimise developer workflows：這裡提到 sshd 並不會開著等，而是要有連線要求時，才會啟動，另外，這個版本所使用的是 debuginfod 這個服務，至於有什麼差別，就文字上來看，一旦開發者有需求，應該會有比較多的「自動化」，試圖優化開發者的工作流程。</li>
-<li>Support for microcontrollers and embedded displays on the Raspberry Pi：Raspberry Pi 一直是我滿想入手玩玩的裝置，現在看來，Ubuntu 22.10 能夠提供較多的支援，我相信是一大福音，如果能夠持續下去，相信總是好事一波。</li>
-<li>Upgraded enterprise management tooling：對於企業部署來說，這一版本也滿有誠意的。</li>
-<li>Improved desktop usability and performance：在看到 <a target="_blank" rel="noopener" href="https://ubuntu.com/blog/canonical-releases-Ubuntu-22-10-kinetic-kudu">Canonical releases Ubuntu 22.10 Kinetic Kudu</a> 這篇貼文之前，我的感受是似乎變得比較順又穩。我猜，會有這樣的感受，可能也是我在同一部機器，以實體的方式運行 Windows 10 好長一段時間，這部機器，扛 Windows 10 在開程式(尤其是載入遊戲)的時候比較喘，相較之下，Ubuntu 22.10 就好上不少。</li>
+<li><p>New tools to optimise developer workflows：這裡提到 sshd 並不會開著等，而是要有連線要求時，才會啟動，另外，這個版本所使用的是 debuginfod 這個服務，至於有什麼差別，就文字上來看，一旦開發者有需求，應該會有比較多的「自動化」，試圖優化開發者的工作流程。</p>
+</li>
+<li><p>Support for microcontrollers and embedded displays on the Raspberry Pi：Raspberry Pi 一直是我滿想入手玩玩的裝置，現在看來，Ubuntu 22.10 能夠提供較多的支援，我相信是一大福音，如果能夠持續下去，相信總是好事一波。</p>
+</li>
+<li><p>Upgraded enterprise management tooling：對於企業部署來說，這一版本也滿有誠意的。</p>
+</li>
+<li><p>Improved desktop usability and performance：在看到 <a target="_blank" rel="noopener" href="https://ubuntu.com/blog/canonical-releases-Ubuntu-22-10-kinetic-kudu">Canonical releases Ubuntu 22.10 Kinetic Kudu</a> 這篇貼文之前，我的感受是似乎變得比較順又穩。我猜，會有這樣的感受，可能也是我在同一部機器，以實體的方式運行 Windows 10 好長一段時間，這部機器，扛 Windows 10 在開程式(尤其是載入遊戲)的時候比較喘，相較之下，Ubuntu 22.10 就好上不少。</p>
+</li>
 </ol>
-<hr>
 <h3 id="中文輸入法框架的使用心得與選擇上的建議"><a href="#中文輸入法框架的使用心得與選擇上的建議" class="headerlink" title="中文輸入法框架的使用心得與選擇上的建議"></a>中文輸入法框架的使用心得與選擇上的建議</h3><ol>
-<li>蝦米族的話，我比較建議的是 iBus → fcitx(4) → Fcitx5，因為 iBus 是系統預設的中法輸入法框架，只要再服用行易有限公司官方釋出的嘸蝦米輸入法的 iBus 表格檔，算是滿簡單輕鬆的。</li>
-<li>新酷音族的話，我個人比較喜歡直接換用 Fcitx5，這比較純綷是我個人的喜好。另外，我製作一支影片，提供給也想用 Fcitx5 搭配新酷音輸入法的伙伴。</li>
+<li><p>蝦米族的話，我比較建議的是 iBus → fcitx(4) → Fcitx5，因為 iBus 是系統預設的中法輸入法框架，只要再服用行易有限公司官方釋出的嘸蝦米輸入法的 iBus 表格檔，算是滿簡單輕鬆的。</p>
+</li>
+<li><p>新酷音族的話，我個人比較喜歡直接換用 Fcitx5，這比較純綷是我個人的喜好。另外，我製作一支影片，提供給也想用 Fcitx5 搭配新酷音輸入法的伙伴。</p>
+</li>
 </ol>
-<hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 ubuntu-22.10-desktop-amd64.iso。</li>
-<li>儘管 Ubuntu 22.04 LTS 並沒有讓我 Long-stay，今次稍稍把玩一下 Ubuntu 22.10，我個人還滿喜歡的。</li>
-<li><a target="_blank" rel="noopener" href="https://ubuntu.com/blog/canonical-releases-Ubuntu-22-10-kinetic-kudu">Canonical releases Ubuntu 22.10 Kinetic Kudu</a></li>
-<li><a target="_blank" rel="noopener" href="https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976?_ga=2.72410259.144319014.1667090878-1376597101.1667003680">Kinetic Kudu Release Notes - Release - Ubuntu Community Hub</a></li>
+<li><p>本次安裝使用的 ISO 檔版本是 ubuntu-22.10-desktop-amd64.iso。</p>
+</li>
+<li><p>儘管 Ubuntu 22.04 LTS 並沒有讓我 Long-stay，今次稍稍把玩一下 Ubuntu 22.10，我個人還滿喜歡的。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ubuntu.com/blog/canonical-releases-Ubuntu-22-10-kinetic-kudu">Canonical releases Ubuntu 22.10 Kinetic Kudu</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976?_ga=2.72410259.144319014.1667090878-1376597101.1667003680">Kinetic Kudu Release Notes - Release - Ubuntu Community Hub</a></p>
+</li>
 </ol>
 
     </div>
@@ -319,10 +326,10 @@
 
     <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
               <a href="/tags/windows/" rel="tag"># windows</a>
               <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
           </div>
 

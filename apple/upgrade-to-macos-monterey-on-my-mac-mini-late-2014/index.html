@@ -46,7 +46,7 @@
 <meta property="og:image" content="https://jute.im/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-17.webp">
 <meta property="og:image" content="https://jute.im/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-18.webp">
 <meta property="article:published_time" content="2022-02-21T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T11:45:47.317Z">
+<meta property="article:modified_time" content="2026-11-27T05:05:04.598Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="apple">
 <meta property="article:tag" content="fedora">
@@ -312,32 +312,26 @@
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>跟當年一樣，蘋果在 Mac 上進行處理器的改朝換代，我就開始將手上的 Mac 出清，目前只留下 <a target="_blank" rel="noopener" href="https://support.apple.com/kb/SP710?viewlocale=zh_TW&locale=zh_CN">Mac mini (2014 年末)</a>。</p>
 <p>就產品週期推估，蘋果將在 2022 春季發表會，釋出全新的 Mac mini，雖然，在蘋果還沒有正式發布之前，這一切都是大家的猜測，然而，隨著行易有限公司日前已正式釋出嘸蝦米輸入法 X2 正式版(詳可見：<a target="_blank" rel="noopener" href="https://boshiamy.com/news_news.php?news=154">嘸蝦米輸入法開放 X2 軟體更新</a>)，我自己認為差不多是該評估與考慮是不是要入手新的機器。</p>
 <p>手邊的舊機器，就會是升級時很好的需求「參考線」，這一篇大概就是紀錄我將系統升級後，花一點時間觀察系統的狀況，推想要不要投入經費升級新主機的過程。</p>
-<hr>
 <h3 id="升級至-macOS-Monterey-之前"><a href="#升級至-macOS-Monterey-之前" class="headerlink" title="升級至 macOS Monterey 之前"></a>升級至 macOS Monterey 之前</h3><p>升級前，我大概做了 3 件事：製作開機隨身碟、取消 iTunes 授權與備份電腦內的資料檔案。</p>
 <h4 id="1-製作開機隨身碟"><a href="#1-製作開機隨身碟" class="headerlink" title="1. 製作開機隨身碟"></a>1. 製作開機隨身碟</h4><p>首先是製作開機隨身碟，我選擇製作 macOS High Sierra 與 macOS Mojave。這個官方參考文件寫得滿好的，請看 <a target="_blank" rel="noopener" href="https://support.apple.com/zh-tw/HT201372">如何製作可開機的 macOS 安裝磁碟 - Apple 支援 (台灣)</a>。</p>
-<p>(1) macOS High Sierra 是之前用 iMac 做好的，而且是做在 SD Card 上面。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-01.webp"></p>
-<p>(2) 考量到手上的機器已經無法對 SD Card 進行寫入的動作，有可能連讀取都不是那麼順暢、穩定，我再花一點時間下載 macOS Mojave 並製作可開機隨身碟。1GB 下載速度加持，耗時不會太久，倒是製作隨身碟，花了 19 分 32 秒(我用錄影的方式計時)。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-02.webp"></p>
-<p> <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-03.webp"></p>
+<p>(1) macOS High Sierra 是之前用 iMac 做好的，而且是做在 SD Card 上面。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-01.webp"></p>
+<p>(2) 考量到手上的機器已經無法對 SD Card 進行寫入的動作，有可能連讀取都不是那麼順暢、穩定，我再花一點時間下載 macOS Mojave 並製作可開機隨身碟。1GB 下載速度加持，耗時不會太久，倒是製作隨身碟，花了 19 分 32 秒(我用錄影的方式計時)。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-02.webp"><img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-03.webp"></p>
 <h4 id="2-取消-iTunes-授權"><a href="#2-取消-iTunes-授權" class="headerlink" title="2. 取消 iTunes 授權"></a>2. 取消 iTunes 授權</h4><p>iTunes 最多可以授權 5 部電腦，用不到而沒有做取消授權的動作，通常都要等個 1 年才能夠重置。</p>
-<p>考量到之前，升級到 Windows 11 的機器掛點，來不及進行「取消授權這部電腦…」，只能等可以進行重置的日期，我才特別先做這件事，單純是一個為防萬一的概念。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-04.webp"></p>
+<p>考量到之前，升級到 Windows 11 的機器掛點，來不及進行「取消授權這部電腦…」，只能等可以進行重置的日期，我才特別先做這件事，單純是一個為防萬一的概念。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-04.webp"></p>
 <h4 id="3-備份電腦內的資料檔案"><a href="#3-備份電腦內的資料檔案" class="headerlink" title="3. 備份電腦內的資料檔案"></a>3. 備份電腦內的資料檔案</h4><p>不是用時光機器，也沒有特別使用什麼備份軟體，但我平常就有備份電腦的習慣。</p>
-<p>加上這部 Mac mini 也呈現半退休狀態，要備份的東西，其實不多，這一個步驟倒是沒有花費太多時間。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-05.webp"></p>
-<p>「照片圖庫」，我通常是整組備份下來。題外話，…我也在考慮是不要要多花一點錢，購買 iCloud 空間，將所有的照片備份到雲端。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-06.webp"></p>
-<hr>
-<h3 id="開始升級至-macOS-Monterey"><a href="#開始升級至-macOS-Monterey" class="headerlink" title="開始升級至 macOS Monterey"></a>開始升級至 macOS Monterey</h3><p>12.18GB 的系統更新，印象中，之前的系統更新沒有那麼肥，…只不過，越來越肥也是正常現象。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-07.webp"></p>
-<p>系統升級並不是從中午 12 點多，升級到 6 點多才完成。印象中，我大概是下午 2 點半出門，出門前就已經走到登入畫面(這樣看來應該是已經更新完成)，由此推算這部機器從 macOS Mojave 升級到 macOS Monterey，光機器自己跑更新的部分，就耗費約 2 個半小時，…不會輸給我之前給 Fedora 34 升級到 Fedora 35 的時間。</p>
-<p><img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-08.webp"></p>
-<p>螢幕使用時間？前些日子，我曾經短暫地在 iMac 上使用 Big Sur，好像沒有在上面看到這個功能。然而，這個功能究竟需不需要呢？我個人認為確實是有必要的，3C 產品是視力殺手，不可不慎。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-09.webp"></p>
-<hr>
-<h3 id="升級至-macOS-Monterey-後的觀察"><a href="#升級至-macOS-Monterey-後的觀察" class="headerlink" title="升級至 macOS Monterey 後的觀察"></a>升級至 macOS Monterey 後的觀察</h3><h4 id="1-記憶體-8GB-不足是硬傷"><a href="#1-記憶體-8GB-不足是硬傷" class="headerlink" title="1. 記憶體(8GB)不足是硬傷"></a>1. 記憶體(8GB)不足是硬傷</h4><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/systempal/id453164367?mt=12">SystemPal</a> 是我老早就購買並持續使用至今的 App，從升級的過程到升級完成，我不時會從這支 App 快速地觀察電腦狀況。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-10.webp"></p>
+<p>加上這部 Mac mini 也呈現半退休狀態，要備份的東西，其實不多，這一個步驟倒是沒有花費太多時間。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-05.webp"></p>
+<p>「照片圖庫」，我通常是整組備份下來。題外話，…我也在考慮是不要要多花一點錢，購買 iCloud 空間，將所有的照片備份到雲端。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-06.webp"></p>
+<h3 id="開始升級至-macOS-Monterey"><a href="#開始升級至-macOS-Monterey" class="headerlink" title="開始升級至 macOS Monterey"></a>開始升級至 macOS Monterey</h3><p>12.18GB 的系統更新，印象中，之前的系統更新沒有那麼肥，…只不過，越來越肥也是正常現象。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-07.webp"></p>
+<p>系統升級並不是從中午 12 點多，升級到 6 點多才完成。印象中，我大概是下午 2 點半出門，出門前就已經走到登入畫面(這樣看來應該是已經更新完成)，由此推算這部機器從 macOS Mojave 升級到 macOS Monterey，光機器自己跑更新的部分，就耗費約 2 個半小時，…不會輸給我之前給 Fedora 34 升級到 Fedora 35 的時間。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-08.webp"></p>
+<p>螢幕使用時間？前些日子，我曾經短暫地在 iMac 上使用 Big Sur，好像沒有在上面看到這個功能。然而，這個功能究竟需不需要呢？我個人認為確實是有必要的，3C 產品是視力殺手，不可不慎。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-09.webp"></p>
+<h3 id="升級至-macOS-Monterey-後的觀察"><a href="#升級至-macOS-Monterey-後的觀察" class="headerlink" title="升級至 macOS Monterey 後的觀察"></a>升級至 macOS Monterey 後的觀察</h3><h4 id="1-記憶體-8GB-不足是硬傷"><a href="#1-記憶體-8GB-不足是硬傷" class="headerlink" title="1. 記憶體(8GB)不足是硬傷"></a>1. 記憶體(8GB)不足是硬傷</h4><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/systempal/id453164367?mt=12">SystemPal</a> 是我老早就購買並持續使用至今的 App，從升級的過程到升級完成，我不時會從這支 App 快速地觀察電腦狀況。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-10.webp"></p>
 <p>升級完當天，我試著讓系統運作 2 個鐘頭，再重開機觀察，發現 8GB 的記憶體，光系統本身就吃到剩 3.9 GB，換句話說，就是以 8GB 的記憶體來說，系統在一開始就吃掉一半以上的記憶體。</p>
 <p>接著在系統上，開個 Firefox 看影片的話，記憶體就吃得差不多，同時要再開另外一支 App，機器就有點吃力。</p>
-<h4 id="2-內建顯示卡可能已經走到極限"><a href="#2-內建顯示卡可能已經走到極限" class="headerlink" title="2. 內建顯示卡可能已經走到極限"></a>2. 內建顯示卡可能已經走到極限</h4><p>登入的畫面就可以感受到，密碼輸入的區塊，邊角加倍圓潤。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-11.webp"></p>
-<p>進到系統就可以感覺到「圓角」似乎又增加不少，也更 iOS 化。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-12.webp"></p>
-<p>只是，有些圓角的處理看起來又不是那麼完美，有時候，我還會看到某些地方的線條旁邊還有稱不上是虛線的「線條」，如果不是內建顯卡可能已經走到極限，那就是我隨便拿一塊別人淘汰的 LCD，顯示上不是那麼完美所致。但，螢幕截圖應該就是系統所呈現的樣態，可見內建顯示卡已經是極限發揮。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-13.webp"></p>
-<h4 id="3-iMovie-需要升級"><a href="#3-iMovie-需要升級" class="headerlink" title="3. iMovie 需要升級"></a>3. iMovie 需要升級</h4><p>另外，升級後，之前下載的系統原始安裝檔，檔案都被自動地移除，而 iMovie 也已經無法開啟，需要更新。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-14.webp"></p>
+<h4 id="2-內建顯示卡可能已經走到極限"><a href="#2-內建顯示卡可能已經走到極限" class="headerlink" title="2. 內建顯示卡可能已經走到極限"></a>2. 內建顯示卡可能已經走到極限</h4><p>登入的畫面就可以感受到，密碼輸入的區塊，邊角加倍圓潤。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-11.webp"></p>
+<p>進到系統就可以感覺到「圓角」似乎又增加不少，也更 iOS 化。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-12.webp"></p>
+<p>只是，有些圓角的處理看起來又不是那麼完美，有時候，我還會看到某些地方的線條旁邊還有稱不上是虛線的「線條」，如果不是內建顯卡可能已經走到極限，那就是我隨便拿一塊別人淘汰的 LCD，顯示上不是那麼完美所致。但，螢幕截圖應該就是系統所呈現的樣態，可見內建顯示卡已經是極限發揮。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-13.webp"></p>
+<h4 id="3-iMovie-需要升級"><a href="#3-iMovie-需要升級" class="headerlink" title="3. iMovie 需要升級"></a>3. iMovie 需要升級</h4><p>另外，升級後，之前下載的系統原始安裝檔，檔案都被自動地移除，而 iMovie 也已經無法開啟，需要更新。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-14.webp"></p>
 <p>我猜，更新到最新版的 iMovie，應該會支援 <a target="_blank" rel="noopener" href="https://support.apple.com/zh-tw/HT212778">在 iPhone 上使用「電影級」模式</a> 錄製的影片。</p>
-<hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li><p>關於蘋果的 Mac 產品週期，可以參考 <a target="_blank" rel="noopener" href="https://buyersguide.macrumors.com/#mac">MacRumors Buyer’s Guide: Know When to Buy iPhone, Mac, iPad</a>。</p>
 </li>
@@ -345,12 +339,11 @@
 </li>
 <li><p>記憶體的硬傷，提醒我一件事：即使硬碟換成 SSD，仍無法改善記憶體不夠用的問題，與其再花錢請人改機，不如存下銀彈直接入手新機。</p>
 </li>
-<li><p>儘管，我現在的儲存空間不會用很兇(如下圖所示)，但未來要入手的機器，還是會期待至少要 1TB 以上的容量比較好。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-15.webp"></p>
+<li><p>儘管，我現在的儲存空間不會用很兇(如下圖所示)，但未來要入手的機器，還是會期待至少要 1TB 以上的容量比較好。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-15.webp"></p>
 </li>
 <li><p>使用約一個星期後，基於硬體扛不太動 macOS Monterey，我決定降級回到 macOS High Sierra。(更新日期：2022 年 2 月 26 日)  </p>
-<p> 硬碟明顯扛不動，有不少人升級 SSD 會有感，但記憶體就像我剛安裝完那樣，重新啟動後，就剩差不多一半(甚至不到)的樣子，再開一支 App，就是等等等等。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-16.webp"></p>
-<p>  <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-17.webp"></p>
-<p> Mac mini (2014 年末)，以我的使用習慣來說，極限在 macOS Mojave，但我更愛 macOS High Sierra。 <img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-18.webp"></p>
+<p> 硬碟明顯扛不動，有不少人升級 SSD 會有感，但記憶體就像我剛安裝完那樣，重新啟動後，就剩差不多一半(甚至不到)的樣子，再開一支 App，就是等等等等。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-16.webp"><img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-17.webp"></p>
+<p> Mac mini (2014 年末)，以我的使用習慣來說，極限在 macOS Mojave，但我更愛 macOS High Sierra。<img src="/pics/apple/2022-02-21-upgrade-to-macos-monterey-on-my-mac-mini-late-2014/upgrade-to-macos-monterey-on-my-mac-mini-late-2014-18.webp"></p>
 </li>
 </ol>
 

@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://jute.im/pics/linux/2021-10-18-migrating-from-xfce-to-gnome-on-arch-linux/migrating-from-xfce-to-gnome-on-arch-linux-01.webp">
 <meta property="article:published_time" content="2021-10-18T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:33.191Z">
+<meta property="article:modified_time" content="2026-11-27T05:31:16.968Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="fedora">
 <meta property="article:tag" content="linux">
@@ -293,18 +293,28 @@
 <p>之前，我的 <a href="/linux/installing-arch-linux-and-boshiamy/" title="安裝 Arch Linux 與嘸蝦米">安裝 Arch Linux 與嘸蝦米</a> 筆記裡，我選擇安裝的是 xfce4 的桌面環境，原因是想要感受一下 Xfce 的輕量與快速，但，憑心而論，我自己是比較習慣用 Gnome 的。</p>
 <p>可想而知，我做了點更換，而這一篇是更換桌面環境過程的筆記。</p>
 <h3 id="程序與工法"><a href="#程序與工法" class="headerlink" title="程序與工法"></a>程序與工法</h3><ol>
-<li>先安裝 Gnome，下一道指令搞定：<code>sudo pacman -S gnome gnome-extra flatpak</code>。</li>
-<li>停用 Xfce：<code>sudo systemctl disable lightdm</code>。</li>
-<li>啟用 Gnome：<code>sudo systemctl enable gdm.service</code>。</li>
-<li>重開機：<code>reboot</code>。</li>
-<li>移除 Xfce 相關套件，一樣也是一道指令：<code>sudo pacman -Rs lightdm lightdm-gtk-greeter xfce4 xfce4-goodies materia-gtk-theme</code>，這個指令可以自行決定要不要執行，我是想讓系統單純一點，因為，會有一段時間，我應該是不會再啟用 Xfce。</li>
-<li>增加官方的 Flathub Repository：<code>flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code>。</li>
-<li>因為有一些錯誤訊息，建議我重新啟動系統，所以，再 <code>reboot</code> 一次。</li>
-<li>原則上就走到這邊，桌面環境大致上都可以使用無誤。</li>
+<li><p>先安裝 Gnome，下一道指令搞定：<code>sudo pacman -S gnome gnome-extra flatpak</code>。</p>
+</li>
+<li><p>停用 Xfce：<code>sudo systemctl disable lightdm</code>。</p>
+</li>
+<li><p>啟用 Gnome：<code>sudo systemctl enable gdm.service</code>。</p>
+</li>
+<li><p>重開機：<code>reboot</code>。</p>
+</li>
+<li><p>移除 Xfce 相關套件，一樣也是一道指令：<code>sudo pacman -Rs lightdm lightdm-gtk-greeter xfce4 xfce4-goodies materia-gtk-theme</code>，這個指令可以自行決定要不要執行，我是想讓系統單純一點，因為，會有一段時間，我應該是不會再啟用 Xfce。</p>
+</li>
+<li><p>增加官方的 Flathub Repository：<code>flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code>。</p>
+</li>
+<li><p>因為有一些錯誤訊息，建議我重新啟動系統，所以，再 <code>reboot</code> 一次。</p>
+</li>
+<li><p>原則上就走到這邊，桌面環境大致上都可以使用無誤。</p>
+</li>
 </ol>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>儘管 Arch Linux 的效能是 Linux Distro 中的前段班，啟動 Gnome 時，與 Clear Linux 似乎沒有太大的差別。</li>
-<li>是說，Fedora 35 的正式版，應該、差不多要問世了吧？</li>
+<li><p>儘管 Arch Linux 的效能是 Linux Distro 中的前段班，啟動 Gnome 時，與 Clear Linux 似乎沒有太大的差別。</p>
+</li>
+<li><p>是說，Fedora 35 的正式版，應該、差不多要問世了吧？</p>
+</li>
 </ol>
 
     </div>
@@ -315,8 +325,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
               <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/%E5%98%B8%E8%9D%A6%E7%B1%B3/" rel="tag"># 嘸蝦米</a>
               <a href="/tags/fedora/" rel="tag"># fedora</a>
           </div>
 

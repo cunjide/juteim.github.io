@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://jute.im/pics/github/2024-03-24-fix-error-bad-signature-0x00000000/fix-error-bad-signature-0x00000000-01.webp">
 <meta property="article:published_time" content="2024-03-24T00:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-24T03:49:32.628Z">
+<meta property="article:modified_time" content="2026-11-27T05:31:16.414Z">
 <meta property="article:author" content="cunjidr＠gmail.com">
 <meta property="article:tag" content="blogware">
 <meta property="article:tag" content="git">
@@ -292,7 +292,6 @@
     
     <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天，把「在 Android 上透過 aBattery 與 Shizuku 來查一下電池健康度」這篇貼文的分類，放到「google」項下，執行 <code>hexo cl &amp; hexo g &amp; hexo d</code> 之後，電腦當機。</p>
 <p>重新啟動系統後，再做一次部落格的更新，卻跳出下列訊息。<br><img src="/pics/github/2024-03-24-fix-error-bad-signature-0x00000000/fix-error-bad-signature-0x00000000-01.webp"></p>
-<hr>
 <h3 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h3><ol>
 <li><p>先說結論，我直接把 <code>deploy_git</code> 這個資料夾，整個刪除，就把問題解決。</p>
 </li>
@@ -301,10 +300,11 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rd /s /q .deploy_git //不一定要在 CMD 執行這道指令，可以開檔案總管刪除 .deploy_git 資料夾</span><br><span class="line">hexo cl &amp; hexo g &amp; hexo d</span><br></pre></td></tr></table></figure>
 
-<hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本來以為會有點麻煩，沒想到這麼快就搞定。</li>
-<li><a target="_blank" rel="noopener" href="https://www.zywvvd.com/notes/tools/git/git-bad-signature/git-bad-signature/">Git 解决 error bad signature 0x00000000 错误 - 又见苍岚</a></li>
+<li><p>本來以為會有點麻煩，沒想到這麼快就搞定。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zywvvd.com/notes/tools/git/git-bad-signature/git-bad-signature/">Git 解决 error bad signature 0x00000000 错误 - 又见苍岚</a></p>
+</li>
 </ol>
 
     </div>
